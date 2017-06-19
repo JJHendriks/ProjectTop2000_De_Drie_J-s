@@ -1,0 +1,23 @@
+﻿<Window x:Class="MockupTop2000.AdminHub"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MockupTop2000"
+        mc:Ignorable="d"
+        Title="AdminHub" Height="146.346" Width="250.038">
+    <Grid Margin="0,0,2,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FFF6C3C3" Offset="1"/>
+                <GradientStop Color="#FF730D0D" Offset="0.339"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Importeer een lijst: " HorizontalAlignment="Left" Height="28" Margin="21,10,0,0" VerticalAlignment="Top" Width="111" Foreground="White"/>
+        <Label Content="Ga naar een lied: " HorizontalAlignment="Left" Height="28" Margin="31,76,0,0" VerticalAlignment="Top" Width="101" Foreground="White"/>
+        <Label Content="Ga naar een Artiest : " HorizontalAlignment="Left" Height="28" Margin="12,43,0,0" VerticalAlignment="Top" Width="120" Foreground="White"/>
+        <Button x:Name="ButtonXlijst" Content="Lijst" HorizontalAlignment="Left" Margin="137,13,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="ButtonXArtiest" Content="Artiest" HorizontalAlignment="Left" Margin="137,46,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="ButtonXLied" Content="Lied" HorizontalAlignment="Left" Margin="137,79,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\bin\Debug\MockupTop2000.exe.config
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\bin\Debug\MockupTop2000.exe
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\bin\Debug\MockupTop2000.pdb
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.csprojResolveAssemblyReference.cache
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MainWindow.g.cs
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\App.g.cs
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000_MarkupCompile.cache
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000_MarkupCompile.lref
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MainWindow.baml
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.g.resources
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.Properties.Resources.resources
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.csproj.GenerateResource.Cache
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.exe
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.pdb
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\WindowArtist.g.cs
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\WindowSong.g.cs
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\WindowArtist.baml
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\WindowSong.baml
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\LoginWindow.g.cs
+C:\Users\justi\Desktop\School\PGM\MockupTop2000\MockupTop2000\obj\Debug\LoginWindow.baml
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\bin\Debug\MockupTop2000.exe.config
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\bin\Debug\MockupTop2000.exe
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\bin\Debug\MockupTop2000.pdb
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.csprojResolveAssemblyReference.cache
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\LoginWindow.g.cs
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MainWindow.g.cs
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\WindowArtist.g.cs
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\WindowSong.g.cs
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\App.g.cs
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000_MarkupCompile.cache
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000_MarkupCompile.lref
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\LoginWindow.baml
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MainWindow.baml
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\WindowArtist.baml
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\WindowSong.baml
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.g.resources
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.Properties.Resources.resources
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.csproj.GenerateResource.Cache
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.exe
+C:\Users\jjhen\Documents\Visual Studio 2017\Projects\MockupTop2000\MockupTop2000\obj\Debug\MockupTop2000.pdb
