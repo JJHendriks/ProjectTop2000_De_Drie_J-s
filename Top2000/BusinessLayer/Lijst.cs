@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    public class List
+    public class Lijst
     {
         private Song lied;
 
@@ -47,7 +47,7 @@ namespace BusinessLayer
             set { verloop = value; }
         }
 
-        public List(Song _lied, Artist _artiest, string _jaar, string _positie, int _verloop)
+        public Lijst(Song _lied, Artist _artiest, string _jaar, string _positie, int _verloop)
         {
             this.lied = _lied;
             this.artiest = _artiest;
@@ -55,7 +55,7 @@ namespace BusinessLayer
             this.positie = _positie;
             this.verloop = _verloop;
         }
-        public List(Song _lied, Artist _artiest, string _jaar, string _positie)
+        public Lijst(Song _lied, Artist _artiest, string _jaar, string _positie)
         {
             this.lied = _lied;
             this.artiest = _artiest;
@@ -63,7 +63,7 @@ namespace BusinessLayer
             this.positie = _positie;
        
         }
-        public List(Song _lied, Artist _artiest)
+        public Lijst(Song _lied, Artist _artiest)
         {
             this.lied = _lied;
             this.artiest = _artiest;
