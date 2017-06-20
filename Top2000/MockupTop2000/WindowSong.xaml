@@ -7,25 +7,125 @@
         mc:Ignorable="d"
          Title="WindowSong" Height="700" Width="600">
     <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <GradientStop Color="#FFF6C3C3" Offset="1"/>
-                <GradientStop Color="#FF730D0D" Offset="0.339"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Image x:Name="Top2000Logo_png" Margin="48,5,350.6,626.4" Source="Top2000Logo.png"/>
-        <Button x:Name="button_Copy" Content="Wijzigen" HorizontalAlignment="Left" Margin="288,48,0,0" VerticalAlignment="Top" Width="91" Height="40"/>
-        <Button x:Name="button_Copy1" Content="Nieuw" HorizontalAlignment="Left" Margin="48,48,0,0" VerticalAlignment="Top" Width="91" Height="40"/>
-        <Label Content="Naam van artiest:" HorizontalAlignment="Left" Margin="48,122,0,0" VerticalAlignment="Top" Width="104" Height="26" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="193"/>
-        <Label Content="Naam van lied:" HorizontalAlignment="Left" Margin="63,154,0,0" VerticalAlignment="Top" Width="89" Height="26" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="193"/>
-        <Label Content="Jaar van lied:" HorizontalAlignment="Left" Margin="75,185,0,0" VerticalAlignment="Top" Width="77" Height="26" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="193"/>
-        <Label Content="Songtext:" HorizontalAlignment="Left" Margin="86,216,0,0" VerticalAlignment="Top" Width="61" Height="26" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Height="446" Margin="152,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="337"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="26" Margin="396,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="396,48,0,0" VerticalAlignment="Top" Width="168" BorderThickness="1" Height="26"/>
+        <TabControl TabStripPlacement="Top" HorizontalAlignment="Stretch" BorderBrush="#41020202">
+            <TabControl.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="270"/>
+            </TabControl.BitmapEffect>
+            <TabControl.Resources>
+                <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TabItem}">
+                                <Grid>
+                                    <Border Name="Border" Margin="0,0,0,0" Background="Transparent"
+                                        BorderBrush="Black" BorderThickness="1,1,1,1" CornerRadius="5">
+                                        <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              ContentSource="Header" Margin="12,2,12,2"
+                              RecognizesAccessKey="True">
+
+                                        </ContentPresenter>
+                                    </Border>
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Panel.ZIndex" Value="100" />
+                                        <Setter TargetName="Border" Property="Background" Value="#FFB34040" />
+                                        <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter TargetName="Border" Property="Background" Value="DarkRed" />
+                                        <Setter TargetName="Border" Property="BorderBrush" Value="Black" />
+                                        <Setter Property="Foreground" Value="DarkGray" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
+            <TabControl.Background>
+                <RadialGradientBrush Center="-0.047,0.553" GradientOrigin="-0.047,0.553" RadiusY="1.231" RadiusX="0.8">
+                    <GradientStop Offset="1" Color="#06FFFFFF"/>
+                    <GradientStop Color="#14FFFFFF"/>
+                </RadialGradientBrush>
+            </TabControl.Background>
+
+            <TabItem Name="TabOne" Header="Song wijzigen"  Height="30px" Width="130px">
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF6C3C3" Offset="1"/>
+                                <GradientStop Color="#FFB03939" Offset="0.5"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="270" Width="256"/>
+                        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="62,10,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="147"/>
+                        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="293,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474"/>
+                        <Label x:Name="label" Content="Naam van het lied:" HorizontalAlignment="Left" Margin="293,143,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
+                        <Button x:Name="button" Content="Opslaan" HorizontalAlignment="Left" Margin="338,45,0,0" VerticalAlignment="Top" Width="162" Height="50"/>
+                        <Label x:Name="label_Copy" Content="Naam van de artiest:" HorizontalAlignment="Left" Margin="293,202,0,0" VerticalAlignment="Top" Width="138" Foreground="White" FontWeight="Bold"/>
+                        <TextBox x:Name="textBox1_Copy3" HorizontalAlignment="Left" Height="23" Margin="293,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474"/>
+                        <Label x:Name="label_Copy5" Content="Jaar van uitkomen:" HorizontalAlignment="Left" Margin="293,261,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
+                        <TextBox x:Name="textBox1_Copy4" HorizontalAlignment="Left" Height="231" Margin="30,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="522" RenderTransformOrigin="0.121,0.474"/>
+                        <Label x:Name="label_Copy6" Content="Songtext:" HorizontalAlignment="Left" Margin="30,343,0,0" VerticalAlignment="Top" Width="71" Foreground="White" FontWeight="Bold"/>
+                        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="293,234,0,0" VerticalAlignment="Top" Width="259"/>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Name="TabTwo" Header="Song verwijderen"  Height="30px" Width="130px">
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF6C3C3" Offset="1"/>
+                                <GradientStop Color="#FFB03939" Offset="0.5"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" Margin="110,34,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="147"/>
+                        <DataGrid x:Name="dataGrid_Copy" HorizontalAlignment="Left" Margin="43,100,0,0" VerticalAlignment="Top" Height="477" Width="296"/>
+                        <Button x:Name="button1" Content="Verwijderen" HorizontalAlignment="Left" Margin="408,264,0,0" VerticalAlignment="Top" Width="81" Height="44"/>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Name="TabThree" Header="Song toevoegen"  Height="30px" Width="130px">
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="59*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF6C3C3" Offset="1"/>
+                                <GradientStop Color="#FFB03939" Offset="0.5"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <TextBox x:Name="textBox1_Copy" HorizontalAlignment="Left" Height="23" Margin="28,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
+                        <Label x:Name="label_Copy1" Content="Naam van het lied:" HorizontalAlignment="Left" Margin="28,119,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
+                        <Label x:Name="label_Copy2" Content="Naam van de artiest:" HorizontalAlignment="Left" Margin="28,178,0,0" VerticalAlignment="Top" Width="138" Foreground="White" FontWeight="Bold"/>
+                        <TextBox x:Name="textBox1_Copy1" HorizontalAlignment="Left" Height="23" Margin="28,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
+                        <Label x:Name="label_Copy3" Content="Jaar van uitkomen:" HorizontalAlignment="Left" Margin="28,237,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
+                        <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="28,210,0,0" VerticalAlignment="Top" Width="259" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox1_Copy2" HorizontalAlignment="Left" Height="231" Margin="28,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="522" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
+                        <Label x:Name="label_Copy4" Content="Songtext:" HorizontalAlignment="Left" Margin="28,361,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
+                        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="144.9,26,0,0" VerticalAlignment="Top" Height="329" Width="230" Grid.Column="1"/>
+                        <Button x:Name="button_Copy" Content="Toevoegen" HorizontalAlignment="Left" Margin="69,39,0,0" VerticalAlignment="Top" Width="162" Height="50" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem Name="tab" Height="30px" Width="130px" Margin="75.2,0,-75.6,0.4">
+                <TabItem.Header>
+                    <Label Content="Menu" MouseLeftButtonDown="tabmenu_clicked" HorizontalAlignment="Stretch"/>
+                </TabItem.Header>
+            </TabItem>
+
+        </TabControl>
+
 
     </Grid>
 </Window>
