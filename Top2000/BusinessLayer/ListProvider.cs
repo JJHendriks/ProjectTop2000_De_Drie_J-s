@@ -11,8 +11,21 @@ namespace BusinessLayer
 
         public static List<Lijst> LijstTop2000;
 
-
-
+        /// <summary>
+        /// Deze methode 
+        /// </summary>
+        /// <param name="_lijst"></param>
+        public static void AddLijstItem(Lijst _lijst)
+        {
+            LijstTop2000.Add(_lijst);
+        }
+        public static void AddListOfLijstItems(List<Lijst> _listoflijst)
+        {
+            foreach (var item in _listoflijst)
+            {
+                AddLijstItem(item);
+            }
+        }
 
         public static List<Admin> Admins;
         /// <summary>

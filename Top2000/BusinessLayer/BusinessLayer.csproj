@@ -48,5 +48,11 @@
     <Compile Include="Song.cs" />
     <Compile Include="Toplist_Song.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{41bfa986-562b-489b-8953-a81c8cbaddc2}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
