@@ -13,10 +13,10 @@
                 <GradientStop Color="#FF730D0D" Offset="0.339"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="31" Margin="53,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="53,118,0,0" VerticalAlignment="Top" Width="160" Height="31"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="31" Margin="53,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
+        <PasswordBox x:Name="tbPass" HorizontalAlignment="Left" Margin="53,118,0,0" VerticalAlignment="Top" Width="160" Height="31"/>
         <Label x:Name="label" Content="Gebruikersnaam:" HorizontalAlignment="Left" Margin="53,14,0,0" VerticalAlignment="Top" Foreground="White" Height="26" Width="99"/>
         <Label x:Name="label_Copy" Content="Wachtwoord:" HorizontalAlignment="Left" Margin="53,87,0,0" VerticalAlignment="Top" Foreground="White" Height="26" Width="80"/>
-        <Button x:Name="button" Content="Log in" HorizontalAlignment="Left" Margin="83,175,0,0" VerticalAlignment="Top" Width="100" Height="28"/>
+        <Button x:Name="btnLogin" Content="Log in" HorizontalAlignment="Left" Margin="83,175,0,0" VerticalAlignment="Top" Width="100" Height="28" Click="btnLogin_Click"/>
     </Grid>
 </Window>

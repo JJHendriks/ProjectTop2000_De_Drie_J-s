@@ -23,5 +23,26 @@ namespace MockupTop2000
         {
             InitializeComponent();
         }
+
+        private void btnLijst_Click(object sender, RoutedEventArgs e)
+        {
+            //importeer een lijst uit een tekst bestand
+        }
+
+        private void btnArtiest_Click(object sender, RoutedEventArgs e)
+        {
+            //navigeer naar het artiesten scherm
+            Window window = new WindowArtist();
+            window.Show();
+            this.Hide();
+        }
+
+        private void btnSong_Click(object sender, RoutedEventArgs e)
+        {
+            //navigeer naar het song scherm
+            Window window = new WindowSong();
+            window.Show();
+            this.Hide();
+        }
     }
 }

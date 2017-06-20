@@ -13,11 +13,11 @@
                 <GradientStop Color="#FFEA4D4D" Offset="0.339"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Center" Margin="10,79,120,0" VerticalAlignment="Top" Width="1142" Height="560" Background="#FFC8C7C7" BorderBrush="Black"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="831,47,0,0" VerticalAlignment="Top" Width="140" BorderThickness="1" Height="26"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="26" Margin="976,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
-        <Image x:Name="Top2000Logo_png" Margin="10,0,1006.6,605.4" Source="Top2000Logo.png"/>
-        <Image x:Name="gear_png" Margin="1184,10,10,616" Cursor="Hand" Source="gear-295455_960_720.png" Stretch="Fill" MouseLeftButtonDown="Eventje" RenderTransformOrigin="0.567,0.066" />
+        <DataGrid x:Name="dgToplist" HorizontalAlignment="Center" Margin="10,79,120,0" VerticalAlignment="Top" Width="1142" Height="560" Background="#FFC8C7C7" BorderBrush="Black"/>
+        <ComboBox x:Name="cbYear" HorizontalAlignment="Left" Margin="831,47,0,0" VerticalAlignment="Top" Width="140" BorderThickness="1" Height="26"/>
+        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Height="26" Margin="976,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
+        <Image x:Name="Top2000Logo" Margin="10,0,1006.6,605.4" Source="Top2000Logo.png"/>
+        <Image x:Name="btnOptions" Margin="1184,10,10,616" Cursor="Hand" Source="gear-295455_960_720.png" Stretch="Fill" MouseLeftButtonDown="options_click" RenderTransformOrigin="0.567,0.066" />
 
     </Grid>
 </Window>

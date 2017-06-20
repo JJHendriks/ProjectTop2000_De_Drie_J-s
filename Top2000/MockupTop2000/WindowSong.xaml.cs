@@ -23,5 +23,11 @@ namespace MockupTop2000
         {
             InitializeComponent();
         }
+        private void tabmenu_clicked(object sender, MouseButtonEventArgs e)
+        {
+            Window window = new AdminHub();
+            window.Show();
+            this.Hide();
+        }
     }
 }

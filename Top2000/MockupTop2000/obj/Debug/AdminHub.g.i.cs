@@ -43,7 +43,7 @@ namespace MockupTop2000 {
         
         #line 19 "..\..\AdminHub.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button ButtonXlijst;
+        internal System.Windows.Controls.Button btnLijst;
         
         #line default
         #line hidden
@@ -51,7 +51,7 @@ namespace MockupTop2000 {
         
         #line 20 "..\..\AdminHub.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button ButtonXArtiest;
+        internal System.Windows.Controls.Button btnArtiest;
         
         #line default
         #line hidden
@@ -59,7 +59,7 @@ namespace MockupTop2000 {
         
         #line 21 "..\..\AdminHub.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Button ButtonXLied;
+        internal System.Windows.Controls.Button btnSong;
         
         #line default
         #line hidden
@@ -95,13 +95,31 @@ namespace MockupTop2000 {
             switch (connectionId)
             {
             case 1:
-            this.ButtonXlijst = ((System.Windows.Controls.Button)(target));
+            this.btnLijst = ((System.Windows.Controls.Button)(target));
+            
+            #line 19 "..\..\AdminHub.xaml"
+            this.btnLijst.Click += new System.Windows.RoutedEventHandler(this.btnLijst_Click);
+            
+            #line default
+            #line hidden
             return;
             case 2:
-            this.ButtonXArtiest = ((System.Windows.Controls.Button)(target));
+            this.btnArtiest = ((System.Windows.Controls.Button)(target));
+            
+            #line 20 "..\..\AdminHub.xaml"
+            this.btnArtiest.Click += new System.Windows.RoutedEventHandler(this.btnArtiest_Click);
+            
+            #line default
+            #line hidden
             return;
             case 3:
-            this.ButtonXLied = ((System.Windows.Controls.Button)(target));
+            this.btnSong = ((System.Windows.Controls.Button)(target));
+            
+            #line 21 "..\..\AdminHub.xaml"
+            this.btnSong.Click += new System.Windows.RoutedEventHandler(this.btnSong_Click);
+            
+            #line default
+            #line hidden
             return;
             }
             this._contentLoaded = true;

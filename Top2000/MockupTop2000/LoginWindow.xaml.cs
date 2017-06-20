@@ -24,6 +24,9 @@ namespace MockupTop2000
             InitializeComponent();
         }
 
-     
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            //valideer naam en ww en navigeer naar admin hub
+        }
     }
 }

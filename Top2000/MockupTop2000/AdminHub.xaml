@@ -16,8 +16,8 @@
         <Label Content="Importeer een lijst: " HorizontalAlignment="Left" Height="28" Margin="21,10,0,0" VerticalAlignment="Top" Width="111" Foreground="White"/>
         <Label Content="Ga naar een lied: " HorizontalAlignment="Left" Height="28" Margin="31,76,0,0" VerticalAlignment="Top" Width="101" Foreground="White"/>
         <Label Content="Ga naar een Artiest : " HorizontalAlignment="Left" Height="28" Margin="12,43,0,0" VerticalAlignment="Top" Width="120" Foreground="White"/>
-        <Button x:Name="ButtonXlijst" Content="Lijst" HorizontalAlignment="Left" Margin="137,13,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="ButtonXArtiest" Content="Artiest" HorizontalAlignment="Left" Margin="137,46,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="ButtonXLied" Content="Lied" HorizontalAlignment="Left" Margin="137,79,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnLijst" Content="Lijst" HorizontalAlignment="Left" Margin="137,13,0,0" VerticalAlignment="Top" Width="75" Click="btnLijst_Click"/>
+        <Button x:Name="btnArtiest" Content="Artiest" HorizontalAlignment="Left" Margin="137,46,0,0" VerticalAlignment="Top" Width="75" Click="btnArtiest_Click"/>
+        <Button x:Name="btnSong" Content="Lied" HorizontalAlignment="Left" Margin="137,79,0,0" VerticalAlignment="Top" Width="75" Click="btnSong_Click"/>
     </Grid>
 </Window>
