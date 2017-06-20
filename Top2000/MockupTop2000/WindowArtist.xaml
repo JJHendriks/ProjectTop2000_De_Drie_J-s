@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MockupTop2000"
         mc:Ignorable="d"
+        Closing="WindowArtist_OnClosing"
         Title="WindowArtist" Height="700" Width="600">
     <Grid>
         <TabControl TabStripPlacement="Top" HorizontalAlignment="Stretch" BorderBrush="#41020202">

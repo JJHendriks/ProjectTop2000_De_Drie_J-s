@@ -23,6 +23,7 @@ namespace MockupTop2000
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void Eventje(object sender, MouseButtonEventArgs e)

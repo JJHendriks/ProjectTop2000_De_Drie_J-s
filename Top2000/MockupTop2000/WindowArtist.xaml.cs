@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,20 @@ namespace MockupTop2000
         public WindowArtist()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+        }
+
+        private void tabmenu_clicked(object sender, MouseButtonEventArgs e)
+        {
+            Window window = new AdminHub();
+            window.Show();
+            this.Hide();
+        }
+
+        private void WindowArtist_OnClosing(object sender, CancelEventArgs e)
+        {
+            Window window = new AdminHub();
+            window.Show();
         }
     }
 }
