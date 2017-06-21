@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top2000", "MockupTop2000\To
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{8CCA7B63-3F0A-4D2E-B799-3134B8215C7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{41BFA986-562B-489B-8953-A81C8CBADDC2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{8CCA7B63-3F0A-4D2E-B799-3134B8215C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CCA7B63-3F0A-4D2E-B799-3134B8215C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CCA7B63-3F0A-4D2E-B799-3134B8215C7E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{41BFA986-562B-489B-8953-A81C8CBADDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41BFA986-562B-489B-8953-A81C8CBADDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41BFA986-562B-489B-8953-A81C8CBADDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41BFA986-562B-489B-8953-A81C8CBADDC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

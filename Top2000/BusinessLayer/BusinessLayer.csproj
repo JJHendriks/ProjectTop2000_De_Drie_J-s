@@ -40,13 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
-    <Compile Include="Artist.cs" />
-    <Compile Include="Lijst.cs" />
-    <Compile Include="ListProvider.cs" />
+    <Compile Include="Connectie classes\Connection.cs" />
+    <Compile Include="Connectie classes\Procedures.cs" />
+    <Compile Include="Frontend classes\Admin.cs" />
+    <Compile Include="Frontend classes\Artist.cs" />
+    <Compile Include="Frontend classes\Lijst.cs" />
+    <Compile Include="Frontend classes\ListProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Song.cs" />
-    <Compile Include="Toplist_Song.cs" />
+    <Compile Include="Frontend classes\Song.cs" />
+    <Compile Include="Frontend classes\Toplist_Song.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
