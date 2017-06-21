@@ -1,8 +1,10 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace BusinessLayer
 {
@@ -12,18 +14,24 @@ namespace BusinessLayer
         public static List<Lijst> LijstTop2000;
 
         /// <summary>
-        /// Deze methode 
+        /// Deze methode voegt één item van de class lijst aan LijstTop2000 toe
         /// </summary>
         /// <param name="_lijst"></param>
         public static void AddLijstItem(Lijst _lijst)
         {
             LijstTop2000.Add(_lijst);
+            
         }
+        /// <summary>
+        /// Deze methode voegt een collectie van items van de class lijst aan LijstTop2000 toe
+        /// </summary>
+        /// <param name="_listoflijst"></param>
         public static void AddListOfLijstItems(List<Lijst> _listoflijst)
         {
             foreach (var item in _listoflijst)
             {
                 AddLijstItem(item);
+                
             }
         }
 
@@ -55,7 +63,7 @@ namespace BusinessLayer
                     _gebruikersnaam: "gebruiker2",
                     _wachtwoord: "wachtwoord2"
                     ));
-
+               
             }
 
         }
@@ -83,7 +91,7 @@ namespace BusinessLayer
                         throw new ArgumentException("Uw wachtwoord klopt niet");
                     }
                 }
-
+                
             }
             throw new ArgumentException("Uw gebruikersnaam bestaat niet");
 

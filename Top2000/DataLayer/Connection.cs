@@ -8,10 +8,9 @@ using System.Data.SqlClient;
 
 namespace DataLayer
 {
-    class Connection
+    public static class Connection
     {
-        public static class CS
-        {
+       
             public static SqlConnection GetConnection()
             {
                 string connectionString =
@@ -19,6 +18,6 @@ namespace DataLayer
                 SqlConnection connection = new SqlConnection(connectionString);
                 return connection;
             }
-        }
+        
     }
 }
