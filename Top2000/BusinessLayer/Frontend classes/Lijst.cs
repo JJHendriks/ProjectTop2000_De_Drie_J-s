@@ -8,32 +8,32 @@ namespace BusinessLayer
 {
     public class Lijst
     {
-        private Song lied;
+        private string lied;
 
-        public Song Lied
+        public string Lied
         {
             get { return lied; }
             set { lied = value; }
         }
-        private Artist artiest;
+        private string artiest;
 
-        public Artist Artiest
+        public string Artiest
         {
             get { return artiest; }
             set { artiest = value; }
         }
 
-        private string jaar;
+        private int jaar;
 
-        public string Jaar
+        public int Jaar
         {
             get { return jaar; }
             set { jaar = value; }
         }
 
-        private string positie;
+        private int positie;
 
-        public string Positie
+        public int Positie
         {
             get { return positie; }
             set { positie = value; }
@@ -47,26 +47,31 @@ namespace BusinessLayer
             set { verloop = value; }
         }
 
-        public Lijst(Song _lied, Artist _artiest, string _jaar, string _positie, int _verloop)
-        {
-            this.lied = _lied;
-            this.artiest = _artiest;
-            this.jaar = _jaar;
-            this.positie = _positie;
-            this.verloop = _verloop;
-        }
-        public Lijst(Song _lied, Artist _artiest, string _jaar, string _positie)
-        {
-            this.lied = _lied;
-            this.artiest = _artiest;
-            this.jaar = _jaar;
-            this.positie = _positie;
+        //public Lijst(string _lied, string _artiest, string _jaar, string _positie, int _verloop)
+        //{
+        //    this.lied = _lied;
+        //    this.artiest = _artiest;
+        //    this.jaar = _jaar;
+        //    this.positie = _positie;
+        //    this.verloop = _verloop;
+        //}
+        //public Lijst(string _lied, string _artiest, string _jaar, string _positie)
+        //{
+        //    this.lied = _lied;
+        //    this.artiest = _artiest;
+        //    this.jaar = _jaar;
+        //    this.positie = _positie;
        
-        }
-        public Lijst(Song _lied, Artist _artiest)
+        //}
+        //public Lijst(string _lied, string _artiest)
+        //{
+        //    this.lied = _lied;
+        //    this.artiest = _artiest;
+        //}
+
+        public Lijst()
         {
-            this.lied = _lied;
-            this.artiest = _artiest;
+            
         }
 
 

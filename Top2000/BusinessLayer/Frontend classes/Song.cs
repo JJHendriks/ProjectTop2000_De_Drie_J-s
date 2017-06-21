@@ -50,7 +50,7 @@ namespace BusinessLayer
 
         private string extra_Info;
 
-        public string Ex
+        public string Extra_Info
         {
             get { return extra_Info; }
             set { extra_Info = value; }
@@ -58,7 +58,20 @@ namespace BusinessLayer
 
 
 
+        public Song(string songid, string artist_id, string title, string year, string image, string extrainfo)
+        {
+            this.song_ID = songid;
+            this.artist_ID = artist_id;
+            this.title = title;
+            this.year = year;
+            this.image = image;
+            this.extra_Info = extrainfo;
+        }
 
+        public Song()
+        {
+            
+        }
 
 
     }

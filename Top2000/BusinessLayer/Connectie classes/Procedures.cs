@@ -31,30 +31,35 @@ namespace DataLayer
             SQLC.Close();
         }
 
-        public static ArrayList GetItem(int _id)
+        public static Lijst GetLijstItem()
         {
             SqlConnection connection = Connection.GetConnection();
             string selectStatement
-                = "SELECT id, Name, price "
-                  + "FROM Client "
-                  + "WHERE id = @id";
+                = "\r\nSELECT l.positie, s.titel, a.naam, s.jaar" +
+                  "\r\nFROM Lijst l" +
+                  "\r\nINNER JOIN Song s on l.songid = s.songid" +
+                  "\r\nINNER JOIN Artiest a on s.artiestid = a.artiestid" +
+                  "\r\nWHERE top2000jaar = 2007 AND s.titel = \'Donna\' AND a.naam = \'10CC\';";
             SqlCommand selectCommand =
                 new SqlCommand(selectStatement, connection);
-            selectCommand.Parameters.AddWithValue("@id", _id);
+            //selectCommand.Parameters.AddWithValue("@id", _id);
 
             try
             {
                 connection.Open();
-                SqlDataReader custReader =
+                SqlDataReader itemReader =
                     selectCommand.ExecuteReader(CommandBehavior.SingleRow);
-                if (custReader.Read())
+                if (itemReader.Read())
                 {
                     
-                    //Customer customer = new Customer();
-                    //customer.ID = custReader["id"].ToString();
-                    //customer.Name = custReader["Name"].ToString();
-                    //customer.Price = custReader["Price"].ToString();
-                    //return customer;
+                    
+                    Lijst lijstitem = new Lijst();
+                    lijstitem.Positie = itemReader.GetInt32(0);
+                    lijstitem.Lied = itemReader.GetString(1);
+                    lijstitem.Artiest = itemReader.GetString(2);
+                    lijstitem.Jaar = itemReader.GetInt32(3);
+
+                    return lijstitem;
                 }
                 else
                 {

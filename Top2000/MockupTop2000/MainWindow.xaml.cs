@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BusinessLayer;
 
 namespace MockupTop2000
 {
@@ -25,11 +26,17 @@ namespace MockupTop2000
             InitializeComponent();
         }
 
-        private void Eventje(object sender, MouseButtonEventArgs e)
+        private void options_click(object sender, MouseButtonEventArgs e)
         {
             LoginWindow window = new LoginWindow();
             window.Show();
             this.Hide();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            dgToplist.Items.Add(ListProvider.ding());
         }
     }
 }

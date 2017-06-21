@@ -3,8 +3,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using DataLayer;
 
 
 namespace BusinessLayer
@@ -97,6 +99,14 @@ namespace BusinessLayer
             throw new ArgumentException("Uw gebruikersnaam bestaat niet");
 
 
+        }
+
+        public static Lijst ding()
+        {
+            LijstTop2000 = new List<Lijst>();
+            LijstTop2000.Add(Procedures.GetLijstItem());
+
+            return LijstTop2000[0];
         }
     }
 }

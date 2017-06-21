@@ -1,0 +1,5 @@
+C:\Users\jjhen\OneDrive\Documents\GitHub\ZAKKENGAJE\Top2000\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\jjhen\OneDrive\Documents\GitHub\ZAKKENGAJE\Top2000\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\jjhen\OneDrive\Documents\GitHub\ZAKKENGAJE\Top2000\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\jjhen\OneDrive\Documents\GitHub\ZAKKENGAJE\Top2000\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\jjhen\OneDrive\Documents\GitHub\ZAKKENGAJE\Top2000\BusinessLayer\obj\Debug\BusinessLayer.pdb
