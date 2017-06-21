@@ -1,3 +1,0 @@
-C:\Users\justi\Source\Repos\ZAKKENGAJE\Top2000\MockupTop2000\bin\Debug\MockupTop2000.exe.config
-C:\Users\justi\Source\Repos\ZAKKENGAJE\Top2000\MockupTop2000\obj\Debug\MockupTop2000.exe
-C:\Users\justi\Source\Repos\ZAKKENGAJE\Top2000\MockupTop2000\obj\Debug\MockupTop2000.pdb
