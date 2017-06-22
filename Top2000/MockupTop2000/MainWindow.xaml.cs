@@ -50,12 +50,15 @@ namespace MockupTop2000
 
             if (!string.IsNullOrEmpty(filterText))
             {
-                cv.Filter = o => {
-                    /* change to get data row value */
+                cv.Filter = o =>
+                {
                     Lijst p = o as Lijst;
-                    return (p.Artiest.ToUpper().StartsWith(filterText.ToUpper()));
-                    /* end change to get data row value */
+                    return (p.Lied.ToUpper().StartsWith(filterText.ToUpper()));
                 };
+            }
+            else
+            {
+                cv.Filter = null;
             }
         }
     }
