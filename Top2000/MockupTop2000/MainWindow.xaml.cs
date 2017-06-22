@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -44,13 +45,17 @@ namespace MockupTop2000
 
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (string.IsNullOrEmpty(tbSearch.Text))
+            string filterText = tbSearch.Text;
+            ICollectionView cv = CollectionViewSource.GetDefaultView(dgToplist.ItemsSource);
+
+            if (!string.IsNullOrEmpty(filterText))
             {
-                (dgToplist.ItemsSource as DataTable).DefaultView.RowFilter = string.Empty;
-            }
-            else
-            {
-                (dgToplist.ItemsSource as DataTable).DefaultView.RowFilter = string.Format("Name='{0}'", tbSearch.Text);
+                cv.Filter = o => {
+                    /* change to get data row value */
+                    Lijst p = o as Lijst;
+                    return (p.Artiest.ToUpper().StartsWith(filterText.ToUpper()));
+                    /* end change to get data row value */
+                };
             }
         }
     }
