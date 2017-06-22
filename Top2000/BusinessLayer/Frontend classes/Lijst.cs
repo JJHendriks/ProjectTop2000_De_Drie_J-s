@@ -9,6 +9,14 @@ namespace BusinessLayer
 {
     public class Lijst
     {
+        private int positie;
+
+        public int Positie
+        {
+            get { return positie; }
+            set { positie = value; }
+        }
+
         private string lied;
 
         public string Lied
@@ -31,14 +39,6 @@ namespace BusinessLayer
         {
             get { return jaar; }
             set { jaar = value; }
-        }
-
-        private int positie;
-
-        public int Positie
-        {
-            get { return positie; }
-            set { positie = value; }
         }
 
         private int verloop;

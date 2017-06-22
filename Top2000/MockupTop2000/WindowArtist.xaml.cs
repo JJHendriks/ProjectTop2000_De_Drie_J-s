@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataLayer;
 
 namespace MockupTop2000
 {
@@ -22,6 +23,8 @@ namespace MockupTop2000
         public WindowArtist()
         {
             InitializeComponent();
+            dgEdit.ItemsSource = Procedures.GetArtists();
+            dgArtistsRemove.ItemsSource = Procedures.GetEmptyArtists();
         }
 
         private void tabmenu_clicked(object sender, MouseButtonEventArgs e)
@@ -29,6 +32,11 @@ namespace MockupTop2000
             Window window = new AdminHub();
             window.Show();
             this.Hide();
+        }
+
+        private void dgEdit_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

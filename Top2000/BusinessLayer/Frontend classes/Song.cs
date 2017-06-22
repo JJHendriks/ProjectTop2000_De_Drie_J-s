@@ -40,14 +40,6 @@ namespace BusinessLayer
             set { year = value; }
         }
 
-        private string image;
-
-        public string Image
-        {
-            get { return image; }
-            set { image = value; }
-        }
-
         private string extra_Info;
 
         public string Extra_Info
@@ -58,13 +50,12 @@ namespace BusinessLayer
 
 
 
-        public Song(string songid, string artist_id, string title, string year, string image, string extrainfo)
+        public Song(string songid, string artist_id, string title, string year, string extrainfo)
         {
             this.song_ID = songid;
             this.artist_ID = artist_id;
             this.title = title;
             this.year = year;
-            this.image = image;
             this.extra_Info = extrainfo;
         }
 

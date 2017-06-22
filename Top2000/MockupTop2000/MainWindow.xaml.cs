@@ -36,16 +36,9 @@ namespace MockupTop2000
             this.Hide();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            dgToplist.ItemsSource = Procedures.SelectListJaar(2000);
-            this.dgToplist.Columns[4].Visibility = Visibility.Hidden;
-        }
-
         private void cbYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             dgToplist.ItemsSource = Procedures.SelectListJaar((int)cbYear.SelectedValue);
-            this.dgToplist.Columns[4].Visibility = Visibility.Hidden;
         }
     }
 }
