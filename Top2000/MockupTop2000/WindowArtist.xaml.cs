@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BusinessLayer;
 using DataLayer;
 
 namespace MockupTop2000
@@ -24,7 +26,7 @@ namespace MockupTop2000
         {
             InitializeComponent();
             dgEdit.ItemsSource = Procedures.GetArtists();
-            dgArtistsRemove.ItemsSource = Procedures.GetEmptyArtists();
+            //dgArtistsRemove.ItemsSource = Procedures.GetEmptyArtists();
         }
 
         private void tabmenu_clicked(object sender, MouseButtonEventArgs e)
@@ -47,8 +49,48 @@ namespace MockupTop2000
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Procedures.AddArtist("een id?", tbNameAdd.Text, tbInfoAdd.Text);
-            Procedures.SelectArtist();
+            Procedures.AddArtist(tbNameAdd.Text, tbInfoAdd.Text);
+            Procedures.CertainArtist();
+        }
+
+        private void tbSearchRemove_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string filterText = tbSearchRemove.Text;
+            ICollectionView cv = CollectionViewSource.GetDefaultView(dgArtistsRemove.ItemsSource);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                cv.Filter = o =>
+                {
+                    Artist p = o as Artist;
+                    return (p.Artist_Name.ToUpper().Contains(filterText.ToUpper()));
+                };
+            }
+            else
+            {
+                cv.Filter = null;
+            }
+        }
+
+        private void tbSearchEdit_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string filterText = tbSearchEdit.Text;
+            ICollectionView cv = CollectionViewSource.GetDefaultView(dgEdit.ItemsSource);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                cv.Filter = o =>
+                {
+                    Artist p = o as Artist;
+                    //Als een artist name de filter tekens bevat wordt hij getoont.
+                    return (p.Artist_Name.ToUpper().Contains(filterText.ToUpper()));
+                };
+            }
+            else
+            {
+                //Zorgen dat als er geen text staat er niet gefilterd word.
+                cv.Filter = null;
+            }
         }
     }
 }
