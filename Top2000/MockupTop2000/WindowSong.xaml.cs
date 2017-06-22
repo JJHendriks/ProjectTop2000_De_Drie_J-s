@@ -40,7 +40,7 @@ namespace MockupTop2000
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            Procedures.EditSong(dgEdit.SelectedValue);
+            Procedures.EditSong((int)dgEdit.SelectedItem, (int)dgArtistAdd_Copy.SelectedItem, tbNameEdit.Text, tbYearEdit.Text);
         }
     }
 }
