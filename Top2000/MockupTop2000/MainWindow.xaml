@@ -13,7 +13,7 @@
                 <GradientStop Color="#FFEA4D4D" Offset="0.339"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <DataGrid x:Name="dgToplist" HorizontalAlignment="Center" Margin="10,79,120,0" VerticalAlignment="Top" Width="1142" Height="560" Background="#FFC8C7C7" BorderBrush="Black"/>
+        <DataGrid x:Name="dgToplist" HorizontalAlignment="Center" Margin="10,79,120,0" VerticalAlignment="Top" Width="1142" Height="560" AlternatingRowBackground="Red"  AlternationCount="2" Background="#FFC8C7C7" BorderBrush="Black"/>
         <ComboBox x:Name="cbYear" HorizontalAlignment="Left" Margin="831,47,0,0" VerticalAlignment="Top" Width="140" BorderThickness="1" Height="26"/>
         <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Height="26" Margin="976,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
         <Image x:Name="Top2000Logo" Margin="10,0,1006.6,605.4" Source="Top2000Logo.png"/>
