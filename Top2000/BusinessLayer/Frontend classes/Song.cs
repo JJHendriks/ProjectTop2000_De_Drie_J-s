@@ -8,20 +8,20 @@ namespace BusinessLayer
 {
    public class Song
     {
-        private string song_ID;
+        private int song_ID;
 
-        public string Song_ID 
+        public int Song_ID 
         {
             get { return song_ID; }
             set { song_ID = value; }
         }
 
-        private string artist_ID;
+        private string artist_Name;
 
-        public string Artist_ID
+        public string Artist_name
         {
-            get { return artist_ID; }
-            set { artist_ID = value; }
+            get { return artist_Name; }
+            set { Artist_name = value; }
         }
 
         private string title;
@@ -50,10 +50,10 @@ namespace BusinessLayer
 
 
 
-        public Song(string songid, string artist_id, string title, string year, string extrainfo)
+        public Song(int songid, string artist_name, string title, string year, string extrainfo)
         {
             this.song_ID = songid;
-            this.artist_ID = artist_id;
+            this.artist_Name = artist_name;
             this.title = title;
             this.year = year;
             this.extra_Info = extrainfo;

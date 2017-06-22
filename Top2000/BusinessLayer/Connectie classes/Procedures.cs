@@ -73,7 +73,7 @@ namespace DataLayer
                 while (itemReader.Read())
                 {
                     Artist artist = new Artist();
-                    artist.Artist_ID = itemReader.GetString(0);
+                    artist.Artist_ID = itemReader.GetInt32(0);
                     artist.Artist_Name = itemReader.GetString(1);
                     artist.Extra_Info = itemReader.GetString(2);
                     artistList.Add(artist);
@@ -144,7 +144,7 @@ namespace DataLayer
                 while (itemReader.Read())
                 {
                     Artist artist = new Artist();
-                    artist.Artist_ID = itemReader.GetString(0);
+                    artist.Artist_ID = itemReader.GetInt32(0);
                     artist.Artist_Name = itemReader.GetString(1);
                 }
                 return lijst;
@@ -178,8 +178,8 @@ namespace DataLayer
                 while (itemReader.Read())
                 {
                     Song song = new Song();
-                    song.Song_ID = itemReader.GetString(0);
-                    song.Artist_ID = itemReader.GetString(1);
+                    song.Song_ID = itemReader.GetInt32(0);
+                    song.Artist_name = itemReader.GetString(1);
                     song.Title = itemReader.GetString(2);
                 }
                 return lijst;
@@ -195,7 +195,7 @@ namespace DataLayer
             }
         }
 
-        public static void RemoveArtist(string artist_id)
+        public static void RemoveArtist(int artist_id)
         {
             SqlConnection connection = Connection.GetConnection();
             SqlCommand cmd = new SqlCommand();
@@ -218,7 +218,7 @@ namespace DataLayer
 
         }
 
-        public static void RemoveSong(string song_id)
+        public static void RemoveSong(int song_id)
         {
             SqlConnection connection = Connection.GetConnection();
             SqlCommand cmd = new SqlCommand();
@@ -264,7 +264,7 @@ namespace DataLayer
             }
         }
 
-        public static void AddSong(string artist_id, string title, string year)
+        public static void AddSong(int artist_id, string title, string year)
         {
             SqlConnection connection = Connection.GetConnection();
             SqlCommand cmd = new SqlCommand();
@@ -288,7 +288,7 @@ namespace DataLayer
             }
         }
 
-        public static void EditSong(string song_id, string artist_id, string title, string year, string extra_info)
+        public static void EditSong(int song_id, int artist_id, string title, string year, string extra_info)
         {
             SqlConnection connection = Connection.GetConnection();
             SqlCommand cmd = new SqlCommand();
@@ -314,7 +314,7 @@ namespace DataLayer
             }
         }
 
-        public static void EditArtist(string artist_id, string artist_name, string extra_info)
+        public static void EditArtist(int artist_id, string artist_name, string extra_info)
         {
             SqlConnection connection = Connection.GetConnection();
             SqlCommand cmd = new SqlCommand();
@@ -356,7 +356,7 @@ namespace DataLayer
                 while (itemReader.Read())
                 {
                     Artist artist = new Artist();
-                    artist.Artist_ID = itemReader.GetString(0);
+                    artist.Artist_ID = itemReader.GetInt32(0);
                     artist.Artist_Name = itemReader.GetString(1);
                     artistList.Add(artist);
 

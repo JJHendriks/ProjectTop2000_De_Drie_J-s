@@ -8,9 +8,9 @@ namespace BusinessLayer
 {
     public class Artist
     {
-        private string artist_ID;
+        private int artist_ID;
 
-        public string Artist_ID
+        public int Artist_ID
         {
             get { return artist_ID; }
             set { artist_ID = value; }

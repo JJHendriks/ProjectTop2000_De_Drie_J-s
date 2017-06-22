@@ -108,6 +108,7 @@
                         <Label x:Name="label_Copy4" Content="Extra info:" HorizontalAlignment="Left" Margin="32,91,0,0" VerticalAlignment="Top" Width="73" Foreground="White" FontWeight="Bold"/>
                         <Button x:Name="btnAdd" Content="Toevoegen" HorizontalAlignment="Left" Margin="395,151,0,0" VerticalAlignment="Top" Width="116" Height="40" Click="btnAdd_Click"/>
                         <DataGrid x:Name="dgArtistAdd" HorizontalAlignment="Left" Margin="62,368,0,0" VerticalAlignment="Top" Height="235" Width="479"/>
+                        <Label x:Name="label_Copy5" Content="Recentelijk toegevoegde artiesten:" HorizontalAlignment="Left" Margin="62,342,0,0" VerticalAlignment="Top" Width="234" Foreground="White" FontWeight="Bold"/>
                     </Grid>
                 </TabItem.Content>
             </TabItem>
