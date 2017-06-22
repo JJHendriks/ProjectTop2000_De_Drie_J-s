@@ -28,7 +28,12 @@ namespace MockupTop2000
         {
             InitializeComponent();
             dgToplist.ItemsSource = Procedures.SelectListJaar(2015);
-            cbYear.ItemsSource = Procedures.GetYears();
+
+            //Vult de combobox met een lijst van beschikbare jaren
+            foreach (var item in Procedures.GetYears())
+            {
+                cbYear.Items.Add(item.Jaar);
+            }
         }
 
         private void options_click(object sender, MouseButtonEventArgs e)
@@ -40,9 +45,12 @@ namespace MockupTop2000
 
         private void cbYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //Refresht de datagrid om het gekozen jaar te tonen
             dgToplist.ItemsSource = Procedures.SelectListJaar((int)cbYear.SelectedValue);
         }
 
+
+        //Methode voor het zoeken naar een song in de datagrid
         private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             string filterText = tbSearch.Text;
@@ -53,11 +61,13 @@ namespace MockupTop2000
                 cv.Filter = o =>
                 {
                     Lijst p = o as Lijst;
-                    return (p.Lied.ToUpper().StartsWith(filterText.ToUpper()));
+                    //Als een lied de filter tekens bevat wordt hij getoont.
+                    return (p.Lied.ToUpper().Contains(filterText.ToUpper()));
                 };
             }
             else
             {
+                //Zorgen dat als er geen text staat er niet gefilterd word.
                 cv.Filter = null;
             }
         }
