@@ -13,10 +13,6 @@ namespace DataLayer
 {
     public static class Procedures
     {
-        public static void SelectSongOfArtist()
-        {
-
-        }
 
         public static List<Lijst> SelectListJaar(int jaar)
         {
@@ -184,8 +180,7 @@ namespace DataLayer
                     Song song = new Song();
                     song.Song_ID = itemReader.GetString(0);
                     song.Artist_ID = itemReader.GetString(1);
-                    song.Extra_Info = itemReader.GetString(2);
-                    song.Title = itemReader.GetString(3);
+                    song.Title = itemReader.GetString(2);
                 }
                 return lijst;
 
@@ -285,6 +280,93 @@ namespace DataLayer
                 cmd.Parameters.AddWithValue("@title", title);
                 cmd.Parameters.AddWithValue("@year", year);
                 cmd.Parameters.AddWithValue("@extra_info", extra_info);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static void EditSong(string song_id, string artist_id, string title, string year, string extra_info)
+        {
+            SqlConnection connection = Connection.GetConnection();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = connection;
+            try
+            {
+                connection.Open();
+                cmd.CommandText = "spEditSong";
+                cmd.Parameters.AddWithValue("@song_id", song_id);
+                cmd.Parameters.AddWithValue("@artist_id", artist_id);
+                cmd.Parameters.AddWithValue("@title", title);
+                cmd.Parameters.AddWithValue("@year", year);
+                cmd.Parameters.AddWithValue("@extra_info", extra_info);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static void EditArtist(string artist_id, string artist_name, string extra_info)
+        {
+            SqlConnection connection = Connection.GetConnection();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = connection;
+            try
+            {
+                connection.Open();
+                cmd.CommandText = "spEditArtist";
+                cmd.Parameters.AddWithValue("@artiest_id", artist_id);
+                cmd.Parameters.AddWithValue("@artiest_naam", artist_name);
+                cmd.Parameters.AddWithValue("@extra_info", extra_info);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static List<Artist> CertainArtist(string artist_id)
+        {
+            List<Artist> artistList = new List<Artist>();
+            SqlConnection connection = Connection.GetConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spCertainArtist";
+
+            try
+            {
+                connection.Open();
+                SqlDataReader itemReader =
+                    cmd.ExecuteReader(CommandBehavior.SingleResult);
+                while (itemReader.Read())
+                {
+                    Artist artist = new Artist();
+                    artist.Artist_ID = itemReader.GetString(0);
+                    artist.Artist_Name = itemReader.GetString(1);
+                    artist.Extra_Info = itemReader.GetString(2);
+                    artistList.Add(artist);
+
+                }
+                return artistList;
+
             }
             catch (SqlException ex)
             {

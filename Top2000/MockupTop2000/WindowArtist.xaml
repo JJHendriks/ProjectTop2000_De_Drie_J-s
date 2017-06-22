@@ -68,7 +68,7 @@
                         <Label x:Name="label_Copy" Content="Extra info:" HorizontalAlignment="Left" Margin="290,87,0,0" VerticalAlignment="Top" Width="73" Foreground="White" FontWeight="Bold"/>
                         <DataGrid x:Name="dgArtistSongs" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="250" Width="379"/>
                         <Label x:Name="label_Copy1" Content="Songs van de gekozen artiest:" HorizontalAlignment="Left" Margin="88,324,0,0" VerticalAlignment="Top" Width="193" Foreground="White" FontWeight="Bold"/>
-                        <Button x:Name="button" Content="Opslaan" HorizontalAlignment="Left" Margin="416,555,0,0" VerticalAlignment="Top" Width="162" Height="50"/>
+                        <Button x:Name="btnSave" Content="Opslaan" HorizontalAlignment="Left" Margin="416,555,0,0" VerticalAlignment="Top" Width="162" Height="50" Click="btnSave_Click"/>
                         <Button x:Name="btnDeleteSong" Content="Song verwijderen" HorizontalAlignment="Left" Margin="416,355,0,0" VerticalAlignment="Top" Width="106" Height="29"/>
                         <Button x:Name="btnEditSong" Content="Song aanpassen" HorizontalAlignment="Left" Margin="416,411,0,0" VerticalAlignment="Top" Width="106" Height="29"/>
                         <Button x:Name="btnAddSong" Content="Song toevoegen" HorizontalAlignment="Left" Margin="416,460,0,0" VerticalAlignment="Top" Width="106" Height="29"/>
@@ -106,7 +106,7 @@
                         <TextBox x:Name="tbInfoAdd" HorizontalAlignment="Left" Height="197" Margin="32,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
                         <Label x:Name="label_Copy3" Content="Naam:" HorizontalAlignment="Left" Margin="32,19,0,0" VerticalAlignment="Top" Width="47" Foreground="White" FontWeight="Bold"/>
                         <Label x:Name="label_Copy4" Content="Extra info:" HorizontalAlignment="Left" Margin="32,91,0,0" VerticalAlignment="Top" Width="73" Foreground="White" FontWeight="Bold"/>
-                        <Button x:Name="btnAdd" Content="Toevoegen" HorizontalAlignment="Left" Margin="395,151,0,0" VerticalAlignment="Top" Width="116" Height="40"/>
+                        <Button x:Name="btnAdd" Content="Toevoegen" HorizontalAlignment="Left" Margin="395,151,0,0" VerticalAlignment="Top" Width="116" Height="40" Click="btnAdd_Click"/>
                         <DataGrid x:Name="dgArtistAdd" HorizontalAlignment="Left" Margin="62,368,0,0" VerticalAlignment="Top" Height="235" Width="479"/>
                     </Grid>
                 </TabItem.Content>

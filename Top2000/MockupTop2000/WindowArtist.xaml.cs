@@ -38,5 +38,17 @@ namespace MockupTop2000
         {
 
         }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            //Aanpassingen aan een artiest opslaan
+            //Procedures.EditArtist();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Procedures.AddArtist("een id?", tbNameAdd.Text, tbInfoAdd.Text);
+            Procedures.SelectArtist();
+        }
     }
 }
