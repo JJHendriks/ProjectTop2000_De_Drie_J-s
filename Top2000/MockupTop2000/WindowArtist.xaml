@@ -61,7 +61,7 @@
                             </LinearGradientBrush>
                         </Grid.Background>
                         <DataGrid x:Name="dgEdit" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="270" Width="256" SelectionChanged="dgEdit_SelectionChanged"/>
-                        <TextBox x:Name="tbSearchEdit" HorizontalAlignment="Left" Height="23" Margin="62,10,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="147"/>
+                        <TextBox x:Name="tbSearchEdit" HorizontalAlignment="Left" Height="23" Margin="62,10,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="147" TextChanged="tbSearchEdit_TextChanged"/>
                         <TextBox x:Name="tbNameEdit" HorizontalAlignment="Left" Height="23" Margin="290,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474"/>
                         <TextBox x:Name="tbInfoEdit" HorizontalAlignment="Left" Height="197" Margin="290,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
                         <Label x:Name="label" Content="Naam:" HorizontalAlignment="Left" Margin="290,15,0,0" VerticalAlignment="Top" Width="47" Foreground="White" FontWeight="Bold"/>
@@ -85,7 +85,7 @@
                                 <GradientStop Color="#FFB03939" Offset="0.5"/>
                             </LinearGradientBrush>
                         </Grid.Background>
-                        <TextBox x:Name="tbSearchRemove" HorizontalAlignment="Left" Height="23" Margin="110,34,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="147"/>
+                        <TextBox x:Name="tbSearchRemove" HorizontalAlignment="Left" Height="23" Margin="110,34,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="147" TextChanged="tbSearchRemove_TextChanged"/>
                         <DataGrid x:Name="dgArtistsRemove" HorizontalAlignment="Left" Margin="43,100,0,0" VerticalAlignment="Top" Height="477" Width="296"/>
                         <Button x:Name="btnDelete" Content="Verwijderen" HorizontalAlignment="Left" Margin="408,264,0,0" VerticalAlignment="Top" Width="81" Height="44"/>
                         <Label x:Name="label_Copy2" Content="Let op!&#xD;&#xA;U kunt een artiest alleen&#xD;&#xA;verwijderen als hij/zij&#xD;&#xA;geen songs heeft!" HorizontalAlignment="Center" Margin="383,147,52,0" VerticalAlignment="Top" Width="153" Foreground="White" FontWeight="Bold" Height="89"/>
