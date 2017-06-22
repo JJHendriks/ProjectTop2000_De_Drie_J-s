@@ -22,6 +22,7 @@ namespace BusinessLayer
         /// <param name="_lijst"></param>
         public static void AddLijstItem(Lijst _lijst)
         {
+
             LijstTop2000.Add(_lijst);
             
         }
@@ -31,6 +32,7 @@ namespace BusinessLayer
         /// <param name="_listoflijst"></param>
         public static void AddListOfLijstItems(List<Lijst> _listoflijst)
         {
+
             foreach (var item in _listoflijst)
             {
                 AddLijstItem(item);
@@ -101,12 +103,11 @@ namespace BusinessLayer
 
         }
 
-        public static Lijst ding()
+        public static List<Lijst> ding()
         {
-            LijstTop2000 = new List<Lijst>();
-            LijstTop2000.Add(Procedures.GetLijstItem());
-
-            return LijstTop2000[0];
+            LijstTop2000 =  new List<Lijst>();
+            AddListOfLijstItems(Procedures.SelectListJaar());
+            return LijstTop2000;
         }
     }
 }

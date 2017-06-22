@@ -36,7 +36,9 @@ namespace MockupTop2000
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            dgToplist.Items.Add(ListProvider.ding());
+
+            dgToplist.ItemsSource = ListProvider.ding();
+            this.dgToplist.Columns[4].Visibility = Visibility.Hidden;
         }
     }
 }
