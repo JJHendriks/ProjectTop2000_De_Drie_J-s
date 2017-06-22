@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MockupTop2000"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="720" Width="668">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -13,7 +13,7 @@
                 <GradientStop Color="#FFEA4D4D" Offset="0.339"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <DataGrid x:Name="dgToplist" HorizontalAlignment="Center" Margin="10,79,120,0" VerticalAlignment="Top" Width="1142" Height="560" AlternatingRowBackground="Red"  AlternationCount="2" BorderBrush="Black">
+        <DataGrid x:Name="dgToplist" HorizontalAlignment="Center" Margin="40,83,52,0" VerticalAlignment="Top" Width="568" Height="560" AlternatingRowBackground="#FFEA4D4D"  AlternationCount="2" BorderBrush="Black" RowBackground="#FFF0B6B6" FontSize="18">
             <DataGrid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF6C3C3" Offset="1"/>
@@ -21,10 +21,10 @@
                 </LinearGradientBrush>
             </DataGrid.Background>
         </DataGrid>
-        <ComboBox x:Name="cbYear" IsReadOnly="True" HorizontalAlignment="Left" Margin="831,47,0,0" VerticalAlignment="Top" Width="140" BorderThickness="1" Height="26" SelectionChanged="cbYear_SelectionChanged"/>
-        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Height="26" Margin="976,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" />
-        <Image x:Name="Top2000Logo" Margin="10,0,1006.6,605.4" Source="Top2000Logo.png"/>
-        <Image x:Name="btnOptions" Margin="1184,10,10,616" Cursor="Hand" Source="gear-295455_960_720.png" Stretch="Fill" MouseLeftButtonDown="options_click" RenderTransformOrigin="0.567,0.066" />
+        <ComboBox x:Name="cbYear" IsReadOnly="True" HorizontalAlignment="Left" Margin="236,29,0,0" VerticalAlignment="Top" Width="140" BorderThickness="1" Height="26" SelectionChanged="cbYear_SelectionChanged"/>
+        <TextBox x:Name="tbSearch" HorizontalAlignment="Left" Height="26" Margin="381,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" />
+        <Image x:Name="Top2000Logo_png" Margin="10,10,442,623" Source="Top2000Logo.png" Stretch="Fill"/>
+        <Image x:Name="gear_295455_960_720_png" Margin="582,10,10,623" Source="gear-295455_960_720.png" Stretch="Fill" ToolTip="opties" Cursor="Hand"/>
 
     </Grid>
 </Window>

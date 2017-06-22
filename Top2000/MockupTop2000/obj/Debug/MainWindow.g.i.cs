@@ -67,7 +67,7 @@ namespace MockupTop2000 {
         
         #line 26 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image Top2000Logo;
+        internal System.Windows.Controls.Image Top2000Logo_png;
         
         #line default
         #line hidden
@@ -75,7 +75,7 @@ namespace MockupTop2000 {
         
         #line 27 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image btnOptions;
+        internal System.Windows.Controls.Image gear_295455_960_720_png;
         
         #line default
         #line hidden
@@ -126,16 +126,10 @@ namespace MockupTop2000 {
             this.tbSearch = ((System.Windows.Controls.TextBox)(target));
             return;
             case 4:
-            this.Top2000Logo = ((System.Windows.Controls.Image)(target));
+            this.Top2000Logo_png = ((System.Windows.Controls.Image)(target));
             return;
             case 5:
-            this.btnOptions = ((System.Windows.Controls.Image)(target));
-            
-            #line 27 "..\..\MainWindow.xaml"
-            this.btnOptions.MouseLeftButtonDown += new System.Windows.Input.MouseButtonEventHandler(this.options_click);
-            
-            #line default
-            #line hidden
+            this.gear_295455_960_720_png = ((System.Windows.Controls.Image)(target));
             return;
             }
             this._contentLoaded = true;

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BusinessLayer;
 
 namespace MockupTop2000
 {
@@ -27,6 +28,10 @@ namespace MockupTop2000
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             //valideer naam en ww en navigeer naar admin hub
+            ListProvider.Inloggen(tbName.Text, tbPass.Password);
+            Window window = new AdminHub();
+            window.Show();
+            this.Hide();
         }
     }
 }
