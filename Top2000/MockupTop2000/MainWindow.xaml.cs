@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,18 @@ namespace MockupTop2000
         private void cbYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             dgToplist.ItemsSource = Procedures.SelectListJaar((int)cbYear.SelectedValue);
+        }
+
+        private void tbSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbSearch.Text))
+            {
+                (dgToplist.ItemsSource as DataTable).DefaultView.RowFilter = string.Empty;
+            }
+            else
+            {
+                (dgToplist.ItemsSource as DataTable).DefaultView.RowFilter = string.Format("Name='{0}'", tbSearch.Text);
+            }
         }
     }
 }
