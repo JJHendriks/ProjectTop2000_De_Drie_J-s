@@ -102,13 +102,6 @@ namespace BusinessLayer
 
 
         }
-
-        public static List<Lijst> ding()
-        {
-            LijstTop2000 =  new List<Lijst>();
-            AddListOfLijstItems(Procedures.SelectListJaar());
-            return LijstTop2000;
-        }
     }
 }
 

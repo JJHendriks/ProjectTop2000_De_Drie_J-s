@@ -95,7 +95,7 @@ namespace DataLayer
 
         }
 
-        public static List<Lijst> SelectListJaar()
+        public static List<Lijst> SelectListJaar(int jaar)
         {
             List<Lijst> lijst = new List<Lijst>();
             SqlConnection connection = Connection.GetConnection();
@@ -104,7 +104,7 @@ namespace DataLayer
             cmd.Connection = connection;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "spTop2000Jaar";
-            cmd.Parameters.AddWithValue("@jaar", 1999);
+            cmd.Parameters.AddWithValue("@jaar", jaar);
 
             try
             {
@@ -124,6 +124,43 @@ namespace DataLayer
                    
                 }
                 return lijst;
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static List<Artist> GetArtists()
+        {
+            List<Artist> artistList = new List<Artist>();
+            SqlConnection connection = Connection.GetConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spAllArtists";
+
+            try
+            {
+                connection.Open();
+                SqlDataReader itemReader =
+                    cmd.ExecuteReader(CommandBehavior.SingleResult);
+                while (itemReader.Read())
+                {
+                    Artist artist = new Artist();
+                    artist.Artist_ID = itemReader.GetString(0);
+                    artist.Artist_Name = itemReader.GetString(1);
+                    artist.Extra_Info = itemReader.GetString(2);
+                    artistList.Add(artist);
+
+                }
+                return artistList;
 
             }
             catch (SqlException ex)

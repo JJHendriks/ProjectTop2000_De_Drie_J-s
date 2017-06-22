@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BusinessLayer;
+using DataLayer;
 
 namespace MockupTop2000
 {
@@ -35,9 +36,7 @@ namespace MockupTop2000
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-
-            dgToplist.ItemsSource = ListProvider.ding();
+            dgToplist.ItemsSource = Procedures.SelectListJaar(2000);
             this.dgToplist.Columns[4].Visibility = Visibility.Hidden;
         }
     }
