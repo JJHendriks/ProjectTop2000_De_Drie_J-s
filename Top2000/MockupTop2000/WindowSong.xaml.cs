@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataLayer;
 
 namespace MockupTop2000
 {
@@ -22,12 +23,24 @@ namespace MockupTop2000
         public WindowSong()
         {
             InitializeComponent();
+            dgSongs.ItemsSource = Procedures.GetSongs();
+            dgArtistAdd.ItemsSource = Procedures.GetArtists();
         }
         private void tabmenu_clicked(object sender, MouseButtonEventArgs e)
         {
             Window window = new AdminHub();
             window.Show();
             this.Hide();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Procedures.AddSong((int)dgArtistAdd.SelectedValue, tbNameAdd.Text, tbYearAdd.Text);
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            Procedures.EditSong(dgEdit.SelectedValue);
         }
     }
 }
