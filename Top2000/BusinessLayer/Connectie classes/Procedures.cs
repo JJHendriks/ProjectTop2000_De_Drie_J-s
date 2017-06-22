@@ -241,7 +241,7 @@ namespace DataLayer
 
         }
 
-        public static void AddArtist(string artist_id, string artist_name, string extra_info)
+        public static void AddArtist(string artist_name, string extra_info)
         {
             SqlConnection connection = Connection.GetConnection();
             SqlCommand cmd = new SqlCommand();
@@ -251,7 +251,6 @@ namespace DataLayer
             {
                     connection.Open();
                     cmd.CommandText = "spAddArtist";
-                    cmd.Parameters.AddWithValue("@artiest_id", artist_id);
                     cmd.Parameters.AddWithValue("@artiest_naam", artist_name);
                     cmd.Parameters.AddWithValue("@extra_info", extra_info);
             }
@@ -265,7 +264,7 @@ namespace DataLayer
             }
         }
 
-        public static void AddSong(string song_id, string artist_id, string title, string year, string extra_info)
+        public static void AddSong(string artist_id, string title, string year)
         {
             SqlConnection connection = Connection.GetConnection();
             SqlCommand cmd = new SqlCommand();
@@ -275,11 +274,9 @@ namespace DataLayer
             {
                 connection.Open();
                 cmd.CommandText = "spAddSong";
-                cmd.Parameters.AddWithValue("@song_id", song_id);
                 cmd.Parameters.AddWithValue("@artist_id", artist_id);
                 cmd.Parameters.AddWithValue("@title", title);
                 cmd.Parameters.AddWithValue("@year", year);
-                cmd.Parameters.AddWithValue("@extra_info", extra_info);
             }
             catch (SqlException ex)
             {
@@ -327,7 +324,7 @@ namespace DataLayer
             {
                 connection.Open();
                 cmd.CommandText = "spEditArtist";
-                cmd.Parameters.AddWithValue("@artiest_id", artist_id);
+                cmd.Parameters.AddWithValue("@artist_id", artist_id);
                 cmd.Parameters.AddWithValue("@artiest_naam", artist_name);
                 cmd.Parameters.AddWithValue("@extra_info", extra_info);
             }
@@ -341,7 +338,7 @@ namespace DataLayer
             }
         }
 
-        public static List<Artist> CertainArtist(string artist_id)
+        public static List<Artist> CertainArtist()
         {
             List<Artist> artistList = new List<Artist>();
             SqlConnection connection = Connection.GetConnection();
@@ -349,7 +346,7 @@ namespace DataLayer
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = connection;
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "spCertainArtist";
+            cmd.CommandText = "spLatestArtists";
 
             try
             {
@@ -361,7 +358,6 @@ namespace DataLayer
                     Artist artist = new Artist();
                     artist.Artist_ID = itemReader.GetString(0);
                     artist.Artist_Name = itemReader.GetString(1);
-                    artist.Extra_Info = itemReader.GetString(2);
                     artistList.Add(artist);
 
                 }
