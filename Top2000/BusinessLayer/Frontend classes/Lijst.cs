@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,7 @@ namespace BusinessLayer
             get { return lied; }
             set { lied = value; }
         }
+       
         private string artiest;
 
         public string Artiest
