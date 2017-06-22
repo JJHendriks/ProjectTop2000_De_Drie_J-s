@@ -172,5 +172,39 @@ namespace DataLayer
                 connection.Close();
             }
         }
+
+        public static List<Lijst> GetYears()
+        {
+            List<Lijst> lijst = new List<Lijst>();
+            SqlConnection connection = Connection.GetConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spAllYears";
+
+            try
+            {
+                connection.Open();
+                SqlDataReader itemReader =
+                    cmd.ExecuteReader(CommandBehavior.SingleResult);
+                while (itemReader.Read())
+                {
+                    Lijst lijstitem = new Lijst();
+                    lijstitem.Jaar = itemReader.GetInt32(3);
+                    lijst.Add(lijstitem);
+                }
+                return lijst;
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

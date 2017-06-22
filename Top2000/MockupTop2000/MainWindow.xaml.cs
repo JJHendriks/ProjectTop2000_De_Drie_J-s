@@ -25,6 +25,8 @@ namespace MockupTop2000
         public MainWindow()
         {
             InitializeComponent();
+            dgToplist.ItemsSource = Procedures.SelectListJaar(2015);
+            cbYear.ItemsSource = Procedures.GetYears();
         }
 
         private void options_click(object sender, MouseButtonEventArgs e)
@@ -37,6 +39,12 @@ namespace MockupTop2000
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             dgToplist.ItemsSource = Procedures.SelectListJaar(2000);
+            this.dgToplist.Columns[4].Visibility = Visibility.Hidden;
+        }
+
+        private void cbYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dgToplist.ItemsSource = Procedures.SelectListJaar((int)cbYear.SelectedValue);
             this.dgToplist.Columns[4].Visibility = Visibility.Hidden;
         }
     }

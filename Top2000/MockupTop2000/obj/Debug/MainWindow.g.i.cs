@@ -115,6 +115,12 @@ namespace MockupTop2000 {
             return;
             case 2:
             this.cbYear = ((System.Windows.Controls.ComboBox)(target));
+            
+            #line 17 "..\..\MainWindow.xaml"
+            this.cbYear.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.cbYear_SelectionChanged);
+            
+            #line default
+            #line hidden
             return;
             case 3:
             this.tbSearch = ((System.Windows.Controls.TextBox)(target));
