@@ -22,6 +22,7 @@ namespace MockupTop2000
     /// </summary>
     public partial class WindowArtist : Window
     {
+        private bool zoekend = false;
         public WindowArtist()
         {
             InitializeComponent();
@@ -37,12 +38,7 @@ namespace MockupTop2000
             this.Hide();
         }
 
-        private void dgEdit_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Artist artiest = (Artist)dgEdit.SelectedValue;
-            int artiest_id = artiest.Artist_ID;
-            dgArtistSongs.ItemsSource = Procedures.GetSongsFromArtist(artiest_id);
-        }
+
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
@@ -51,7 +47,6 @@ namespace MockupTop2000
             int artiest_id = artiest.Artist_ID;
 
             Procedures.EditArtist(artiest_id, tbNameEdit.Text, tbInfoEdit.Text);
-            dgEdit.ItemsSource = Procedures.GetArtists();
             tbNameEdit.Text = "";
             tbInfoEdit.Text = "";
             tbSearchEdit.Clear();
@@ -101,6 +96,7 @@ namespace MockupTop2000
                 {
                     Artist p = o as Artist;
                     //Als een artist name de filter tekens bevat wordt hij getoont.
+                    zoekend = true;
                     return (p.Artist_Name.ToUpper().Contains(filterText.ToUpper()));
                 };
             }
@@ -108,9 +104,24 @@ namespace MockupTop2000
             {
                 //Zorgen dat als er geen text staat er niet gefilterd word.
                 cv.Filter = null;
+                zoekend = false;
             }
         }
 
-      
+        private void dgEdit_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (zoekend = true)
+            {
+                Artist artiest = (Artist) dgEdit.SelectedValue;
+                int artiest_id = artiest.Artist_ID;
+                dgArtistSongs.ItemsSource = Procedures.GetSongsFromArtist(artiest_id);
+                tbNameEdit.Text = artiest.Artist_Name;
+                tbInfoEdit.Text = artiest.Extra_Info;
+            }
+            else
+            {
+                dgEdit.SelectedItems.Clear();
+            }
+        }
     }
 }

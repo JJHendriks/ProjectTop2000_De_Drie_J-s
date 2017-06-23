@@ -206,7 +206,7 @@ namespace DataLayer
             cmd.Connection = connection;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "spTop2000LiedjesVanArtiest";
-            cmd.Parameters.AddWithValue("@artiest_id", artist_id);
+            cmd.Parameters.AddWithValue("@artist_id", artist_id);
 
             try
             {

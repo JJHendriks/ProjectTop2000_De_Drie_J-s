@@ -60,7 +60,7 @@
                                 <GradientStop Color="#FFB03939" Offset="0.5"/>
                             </LinearGradientBrush>
                         </Grid.Background>
-                        <DataGrid x:Name="dgEdit" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="270" Width="256" SelectionChanged="dgEdit_SelectionChanged"/>
+                        <DataGrid x:Name="dgEdit" IsReadOnly="True" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="270" Width="256" SelectionChanged="dgEdit_SelectionChanged" />
                         <TextBox x:Name="tbSearchEdit" HorizontalAlignment="Left" Height="23" Margin="62,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" TextChanged="tbSearchEdit_TextChanged"/>
                         <TextBox x:Name="tbNameEdit" HorizontalAlignment="Left" Height="23" Margin="290,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474"/>
                         <TextBox x:Name="tbInfoEdit" HorizontalAlignment="Left" Height="197" Margin="290,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259"/>
@@ -68,10 +68,7 @@
                         <Label x:Name="label_Copy" Content="Biografie:" HorizontalAlignment="Left" Margin="290,87,0,0" VerticalAlignment="Top" Width="73" Foreground="White" FontWeight="Bold"/>
                         <DataGrid x:Name="dgArtistSongs" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Height="250" Width="379"/>
                         <Label x:Name="label_Copy1" Content="Songs van de gekozen artiest:" HorizontalAlignment="Left" Margin="88,324,0,0" VerticalAlignment="Top" Width="193" Foreground="White" FontWeight="Bold"/>
-                        <Button x:Name="btnSave" Content="Opslaan" HorizontalAlignment="Left" Margin="416,555,0,0" VerticalAlignment="Top" Width="162" Height="50" Click="btnSave_Click"/>
-                        <Button x:Name="btnDeleteSong" Content="Song verwijderen" HorizontalAlignment="Left" Margin="416,355,0,0" VerticalAlignment="Top" Width="106" Height="29"/>
-                        <Button x:Name="btnEditSong" Content="Song aanpassen" HorizontalAlignment="Left" Margin="416,411,0,0" VerticalAlignment="Top" Width="106" Height="29"/>
-                        <Button x:Name="btnAddSong" Content="Song toevoegen" HorizontalAlignment="Left" Margin="416,460,0,0" VerticalAlignment="Top" Width="106" Height="29"/>
+                        <Button x:Name="btnSave" Content="Opslaan" HorizontalAlignment="Left" Margin="416,454,0,0" VerticalAlignment="Top" Width="162" Height="50" Click="btnSave_Click"/>
                     </Grid>
                 </TabItem.Content>
             </TabItem>

@@ -119,5 +119,25 @@ namespace MockupTop2000
 
         #endregion
 
+        private void tbSearchEdit_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string filterText = tbSearchEdit.Text;
+            ICollectionView cv = CollectionViewSource.GetDefaultView(dgSongs.ItemsSource);
+
+            if (!string.IsNullOrEmpty(filterText))
+            {
+                cv.Filter = o =>
+                {
+                    Song p = o as Song;
+                    //Als een lied de filter tekens bevat wordt hij getoont.
+                    return (p.Title.ToUpper().Contains(filterText.ToUpper()));
+                };
+            }
+            else
+            {
+                //Zorgen dat als er geen text staat er niet gefilterd word.
+                cv.Filter = null;
+            }
+        }
     }
 }
