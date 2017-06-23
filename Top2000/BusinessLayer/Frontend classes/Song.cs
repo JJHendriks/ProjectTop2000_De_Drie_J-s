@@ -29,7 +29,7 @@ namespace BusinessLayer
         public string Artist_name
         {
             get { return artist_Name; }
-            set { Artist_name = value; }
+            set { artist_Name = value; }
         }
 
         private string title;

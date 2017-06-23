@@ -28,10 +28,19 @@ namespace MockupTop2000
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             //valideer naam en ww en navigeer naar admin hub
-            ListProvider.Inloggen(tbName.Text, tbPass.Password);
-            Window window = new AdminHub();
-            window.Show();
-            this.Hide();
+            try
+            {
+                ListProvider.Inloggen(tbName.Text, tbPass.Password);
+                Window window = new AdminHub();
+                window.Show();
+                this.Hide();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Uw gebruikersnaam of wachtwoord is niet correct.");
+                throw;
+            }
         }
+    }
     }
 }
