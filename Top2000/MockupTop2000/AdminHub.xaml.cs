@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +29,20 @@ namespace MockupTop2000
         private void btnLijst_Click(object sender, RoutedEventArgs e)
         {
             //importeer een lijst uit een tekst bestand
+
+            //IMPORTANT CODE IS WORK IS PROGRESS.
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.DefaultExt = ".txt";
+            ofd.Filter = "Text Document (.txt|*.txt";
+            if (ofd.ShowDialog() == true) { 
+                var list = new List<BusinessLayer.Lijst>();
+                using (StreamReader reader = File.OpenText(ofd.FileName))
+                {
+                    string str = File.ReadAllText(ofd.FileName);
+                    MessageBox.Show(str);
+                }
+            }
         }
 
         private void btnArtiest_Click(object sender, RoutedEventArgs e)
