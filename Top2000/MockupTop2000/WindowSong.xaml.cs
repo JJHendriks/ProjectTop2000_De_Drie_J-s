@@ -45,7 +45,7 @@ namespace MockupTop2000
         {
             Song song = (Song)dgSongs.SelectedValue;
             tbNameEdit.Text = song.Artist_name;
-            tbYearEdit.Text = song.Year;
+            tbYearEdit.Text = song.Year.ToString();
         }
 
         private void tbSearchArtistEdit_TextChanged(object sender, TextChangedEventArgs e)
@@ -79,7 +79,15 @@ namespace MockupTop2000
         #region tabAdd 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Procedures.AddSong((int)dgArtistAdd.SelectedValue, tbNameAdd.Text, tbYearAdd.Text);
+            Artist artist = (Artist)dgArtistAdd.SelectedValue;
+            Procedures.AddSong(artist.Artist_ID, tbNameAdd.Text, tbYearAdd.Text);
+            dgAddSongs.ItemsSource = Procedures.CertainSong();
+            this.dgAddSongs.Columns[1].Visibility = Visibility.Hidden;
+            this.dgAddSongs.Columns[2].Visibility = Visibility.Hidden;
+            tbNameAdd.Clear();
+            tbSearchArtistAdd.Clear();
+            tbYearAdd.Clear();
+            MessageBox.Show("De song is succesvol toegevoegd!");
         }
 
         private void tabmenu_clicked(object sender, MouseButtonEventArgs e)

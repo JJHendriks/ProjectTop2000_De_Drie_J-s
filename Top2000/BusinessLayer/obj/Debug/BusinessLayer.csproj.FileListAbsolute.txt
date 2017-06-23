@@ -13,3 +13,8 @@ C:\Users\jjhen\Documents\GitHub\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer
 C:\Users\jjhen\Documents\GitHub\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\jjhen\Documents\GitHub\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\jjhen\Documents\GitHub\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\justi\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\justi\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\justi\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\justi\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\justi\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\BusinessLayer\obj\Debug\BusinessLayer.pdb

@@ -112,7 +112,7 @@
                         <Label x:Name="label_Copy2" Content="Naam van de artiest:" HorizontalAlignment="Left" Margin="28,140,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
                         <TextBox x:Name="tbYearAdd" HorizontalAlignment="Left" Height="23" Margin="28,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
                         <Label x:Name="label_Copy3" Content="Jaar van uitkomen:" HorizontalAlignment="Left" Margin="28,267,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
-                        <DataGrid x:Name="dgEdit" HorizontalAlignment="Left" Margin="144.8,26,0,0" VerticalAlignment="Top" Height="295" Width="230" Grid.Column="1"/>
+                        <DataGrid x:Name="dgAddSongs" HorizontalAlignment="Left" Margin="144.8,26,0,0" VerticalAlignment="Top" Height="295" Width="230" Grid.Column="1"/>
                         <Button x:Name="btnAdd" Content="Toevoegen" HorizontalAlignment="Left" Margin="44,26,0,0" VerticalAlignment="Top" Width="162" Height="50" Grid.ColumnSpan="2" Click="btnAdd_Click"/>
                         <DataGrid x:Name="dgArtistAdd" HorizontalAlignment="Left" Margin="28,171,0,0" VerticalAlignment="Top" Height="91" Width="259" Grid.ColumnSpan="2"/>
                         <TextBox x:Name="tbSearchArtistAdd" HorizontalAlignment="Left" Height="23" Margin="10,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.121,0.474" Grid.Column="1" TextChanged="tbSearchArtistAdd_TextChanged"/>

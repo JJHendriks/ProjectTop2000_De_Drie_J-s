@@ -433,7 +433,7 @@ namespace DataLayer
             SqlCommand insertCommand =
                 new SqlCommand(insertStatement, connection);
             insertCommand.Parameters.AddWithValue(
-                "@artiest_id", artist_id);
+                "@artist_id", artist_id);
             insertCommand.Parameters.AddWithValue(
                 "@title", title);
             insertCommand.Parameters.AddWithValue(
@@ -563,6 +563,43 @@ namespace DataLayer
                     return true;
                 else
                     return false;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static List<Song> CertainSong()
+        {
+            List<Song> list = new List<Song>();
+            SqlConnection connection = Connection.GetConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spLatestSongs";
+
+            try
+            {
+                connection.Open();
+                SqlDataReader itemReader =
+                    cmd.ExecuteReader(CommandBehavior.SingleResult);
+                while (itemReader.Read())
+                {
+                    Song song = new Song();
+                    song.Song_ID = itemReader.GetInt32(0);
+                    song.Title = itemReader.GetString(1);
+                    song.Year = itemReader.GetInt32(2);
+                    list.Add(song);
+
+                }
+                return list;
+
             }
             catch (SqlException ex)
             {
