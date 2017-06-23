@@ -38,7 +38,6 @@ namespace MockupTop2000
             catch (Exception)
             {
                 MessageBox.Show("Uw gebruikersnaam of wachtwoord is niet correct.");
-                throw;
             }
         }
     }

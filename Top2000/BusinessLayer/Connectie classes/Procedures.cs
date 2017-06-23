@@ -216,8 +216,9 @@ namespace DataLayer
                 while (itemReader.Read())
                 {
                     Song song = new Song();
-                    song.Song_ID = itemReader.GetInt32(0);
+                    song.Artist_name = itemReader.GetString(0);
                     song.Title = itemReader.GetString(1);
+                    lijst.Add(song);
                 }
                 return lijst;
 

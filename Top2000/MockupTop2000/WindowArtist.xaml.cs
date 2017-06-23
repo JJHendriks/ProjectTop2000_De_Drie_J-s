@@ -39,9 +39,9 @@ namespace MockupTop2000
 
         private void dgEdit_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Artist artiest = (Artist)dgEdit.SelectedValue;
-            //int artiest_id = artiest.Artist_ID;
-            //dgArtistSongs.ItemsSource = Procedures.GetSongsFromArtist(artiest_id);
+            Artist artiest = (Artist)dgEdit.SelectedValue;
+            int artiest_id = artiest.Artist_ID;
+            dgArtistSongs.ItemsSource = Procedures.GetSongsFromArtist(artiest_id);
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
