@@ -78,23 +78,8 @@
                 </TabItem.Content>
             </TabItem>
 
-            <TabItem Name="TabTwo" Header="Song verwijderen"  Height="30px" Width="130px">
-                <TabItem.Content>
-                    <Grid>
-                        <Grid.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                                <GradientStop Color="#FFF6C3C3" Offset="1"/>
-                                <GradientStop Color="#FFB03939" Offset="0.5"/>
-                            </LinearGradientBrush>
-                        </Grid.Background>
-                        <TextBox x:Name="tbSearchDelete" HorizontalAlignment="Left" Height="23" Margin="367,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
-                        <DataGrid x:Name="dgDelete" HorizontalAlignment="Left" Margin="39,10,0,0" VerticalAlignment="Top" Height="341" Width="296"/>
-                        <Button x:Name="button1" Content="Verwijderen" HorizontalAlignment="Left" Margin="408,197,0,0" VerticalAlignment="Top" Width="106" Height="63"/>
-                    </Grid>
-                </TabItem.Content>
-            </TabItem>
-
-            <TabItem Name="TabThree" Header="Song toevoegen"  Height="30px" Width="130px">
+           
+            <TabItem Name="TabTwo" Header="Song toevoegen"  Height="30px" Width="130px">
                 <TabItem.Content>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -112,7 +97,7 @@
                         <Label x:Name="label_Copy2" Content="Naam van de artiest:" HorizontalAlignment="Left" Margin="28,140,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
                         <TextBox x:Name="tbYearAdd" HorizontalAlignment="Left" Height="23" Margin="28,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
                         <Label x:Name="label_Copy3" Content="Jaar van uitkomen:" HorizontalAlignment="Left" Margin="28,267,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
-                        <DataGrid x:Name="dgEdit" HorizontalAlignment="Left" Margin="144.8,26,0,0" VerticalAlignment="Top" Height="295" Width="230" Grid.Column="1"/>
+                        <DataGrid x:Name="dgAddSongs" HorizontalAlignment="Left" Margin="144.8,26,0,0" VerticalAlignment="Top" Height="295" Width="230" Grid.Column="1"/>
                         <Button x:Name="btnAdd" Content="Toevoegen" HorizontalAlignment="Left" Margin="44,26,0,0" VerticalAlignment="Top" Width="162" Height="50" Grid.ColumnSpan="2" Click="btnAdd_Click"/>
                         <DataGrid x:Name="dgArtistAdd" HorizontalAlignment="Left" Margin="28,171,0,0" VerticalAlignment="Top" Height="91" Width="259" Grid.ColumnSpan="2"/>
                         <TextBox x:Name="tbSearchArtistAdd" HorizontalAlignment="Left" Height="23" Margin="10,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.121,0.474" Grid.Column="1" TextChanged="tbSearchArtistAdd_TextChanged"/>
@@ -120,7 +105,7 @@
                 </TabItem.Content>
             </TabItem>
 
-            <TabItem Name="tab" Height="30px" Width="130px" Margin="75.2,0,-75.6,0.4">
+            <TabItem Name="tab" Height="30px" Width="130px" Margin="194.8,0,-195.2,0.4">
                 <TabItem.Header>
                     <Label Content="Menu" MouseLeftButtonDown="tabmenu_clicked" HorizontalAlignment="Stretch"/>
                 </TabItem.Header>

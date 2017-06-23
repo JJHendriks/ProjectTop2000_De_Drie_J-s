@@ -16,6 +16,23 @@ namespace BusinessLayer
             set { song_ID = value; }
         }
 
+        private string title;
+
+        public string Title
+        {
+            get { return title; }
+            set { title = value; }
+        }
+
+
+        private int year;
+
+        public int Year
+        {
+            get { return year; }
+            set { year = value; }
+        }
+
         private int artist_id;
 
         public int Artist_id
@@ -32,25 +49,7 @@ namespace BusinessLayer
             set { artist_Name = value; }
         }
 
-        private string title;
-
-        public string Title
-        {
-            get { return title; }
-            set { title = value; }
-        }
-
-        private string year;
-
-        public string Year
-        {
-            get { return year; }
-            set { year = value; }
-        }
-
-
-
-        public Song(int songid, int artist_Id, string artist_name, string title, string year)
+        public Song(int songid, int artist_Id, string artist_name, string title, int year)
         {
             this.song_ID = songid;
             this.artist_id = artist_Id;

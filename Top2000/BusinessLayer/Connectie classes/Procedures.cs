@@ -182,6 +182,8 @@ namespace DataLayer
                     song.Title = itemReader.GetString(1);
                     song.Artist_id = itemReader.GetInt32(2);
                     song.Artist_name = itemReader.GetString(3);
+                    song.Year = itemReader.GetInt32(4);
+                    lijst.Add(song);
                 }
                 return lijst;
 
@@ -214,8 +216,9 @@ namespace DataLayer
                 while (itemReader.Read())
                 {
                     Song song = new Song();
-                    song.Song_ID = itemReader.GetInt32(0);
+                    song.Artist_name = itemReader.GetString(0);
                     song.Title = itemReader.GetString(1);
+                    lijst.Add(song);
                 }
                 return lijst;
 
@@ -239,7 +242,7 @@ namespace DataLayer
             cmd.Connection = connection;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "spSelectArtist";
-            cmd.Parameters.AddWithValue("@artiest_id", artist_id);
+            cmd.Parameters.AddWithValue("@artist_id", artist_id);
 
             try
             {
@@ -251,6 +254,7 @@ namespace DataLayer
                     Artist artist = new Artist();
                     artist.Artist_ID = itemReader.GetInt32(0);
                     artist.Artist_Name = itemReader.GetString(1);
+                    lijst.Add(artist);
                 }
                 return lijst;
 
@@ -425,7 +429,7 @@ namespace DataLayer
         //    }
         //}
 
-        public static void AddSong(int artist_id, string title, string year)
+        public static void AddSong(int artist_id, string title, int year)
         {
             SqlConnection connection = Connection.GetConnection();
             string insertStatement =
@@ -433,7 +437,7 @@ namespace DataLayer
             SqlCommand insertCommand =
                 new SqlCommand(insertStatement, connection);
             insertCommand.Parameters.AddWithValue(
-                "@artiest_id", artist_id);
+                "@artist_id", artist_id);
             insertCommand.Parameters.AddWithValue(
                 "@title", title);
             insertCommand.Parameters.AddWithValue(
@@ -481,7 +485,7 @@ namespace DataLayer
         //    }
         //}
 
-        public static bool EditSong(int song_id, int artist_id, string title, string year)
+        public static bool EditSong(int song_id, int artist_id, string title, int year)
         {
             SqlConnection connection = Connection.GetConnection();
             string updateStatement =
@@ -563,6 +567,43 @@ namespace DataLayer
                     return true;
                 else
                     return false;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static List<Song> CertainSong()
+        {
+            List<Song> list = new List<Song>();
+            SqlConnection connection = Connection.GetConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spLatestSongs";
+
+            try
+            {
+                connection.Open();
+                SqlDataReader itemReader =
+                    cmd.ExecuteReader(CommandBehavior.SingleResult);
+                while (itemReader.Read())
+                {
+                    Song song = new Song();
+                    song.Song_ID = itemReader.GetInt32(0);
+                    song.Title = itemReader.GetString(1);
+                    song.Year = itemReader.GetInt32(2);
+                    list.Add(song);
+
+                }
+                return list;
+
             }
             catch (SqlException ex)
             {

@@ -56,7 +56,7 @@ namespace MockupTop2000
             tbInfoEdit.Text = "";
             tbSearchEdit.Clear();
             this.dgEdit.Columns[2].Visibility = Visibility.Hidden;
-
+            MessageBox.Show("Artiest updated!");
 
         }
 
@@ -67,6 +67,7 @@ namespace MockupTop2000
             this.dgArtistAdd.Columns[2].Visibility = Visibility.Hidden;
             tbNameAdd.Text = "";
             tbInfoAdd.Text = "";
+            MessageBox.Show("Artiest toegevoegd!");
 
         }
 
