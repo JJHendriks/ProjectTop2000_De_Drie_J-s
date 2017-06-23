@@ -195,7 +195,7 @@ namespace DataLayer
                 connection.Close();
             }
         }
-        public static List<Song> GetSongsFromArtist(string artist_naam)
+        public static List<Song> GetSongsFromArtist(int artist_id)
         {
             List<Song> lijst = new List<Song>();
             SqlConnection connection = Connection.GetConnection();
@@ -204,7 +204,7 @@ namespace DataLayer
             cmd.Connection = connection;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "spTop2000LiedjesVanArtiest";
-            cmd.Parameters.AddWithValue("@ArtiestNaam", artist_naam);
+            cmd.Parameters.AddWithValue("@artiest_id", artist_id);
 
             try
             {

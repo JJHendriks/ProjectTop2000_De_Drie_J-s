@@ -25,6 +25,7 @@ namespace MockupTop2000
         public WindowSong()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             dgSongs.ItemsSource = Procedures.GetSongs();
             dgArtistEdit.ItemsSource = Procedures.GetArtists();
             dgArtistAdd.ItemsSource = Procedures.GetArtists();
