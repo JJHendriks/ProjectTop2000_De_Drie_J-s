@@ -39,9 +39,9 @@ namespace MockupTop2000
 
         private void dgEdit_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Artist artiest = (Artist)dgEdit.SelectedValue;
-            int artiest_id = artiest.Artist_ID;
-            dgArtistSongs.ItemsSource = Procedures.GetSongsFromArtist(artiest_id);
+            //Artist artiest = (Artist)dgEdit.SelectedValue;
+            //int artiest_id = artiest.Artist_ID;
+            //dgArtistSongs.ItemsSource = Procedures.GetSongsFromArtist(artiest_id);
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
@@ -56,7 +56,7 @@ namespace MockupTop2000
             tbInfoEdit.Text = "";
             tbSearchEdit.Clear();
             this.dgEdit.Columns[2].Visibility = Visibility.Hidden;
-
+            MessageBox.Show("Artiest updated!");
 
         }
 
@@ -67,6 +67,7 @@ namespace MockupTop2000
             this.dgArtistAdd.Columns[2].Visibility = Visibility.Hidden;
             tbNameAdd.Text = "";
             tbInfoAdd.Text = "";
+            MessageBox.Show("Artiest toegevoegd!");
 
         }
 

@@ -182,6 +182,7 @@ namespace DataLayer
                     song.Title = itemReader.GetString(1);
                     song.Artist_id = itemReader.GetInt32(2);
                     song.Artist_name = itemReader.GetString(3);
+                    lijst.Add(song);
                 }
                 return lijst;
 
