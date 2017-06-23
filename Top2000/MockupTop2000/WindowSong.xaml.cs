@@ -26,29 +26,26 @@ namespace MockupTop2000
         {
             InitializeComponent();
             dgSongs.ItemsSource = Procedures.GetSongs();
+            dgArtistEdit.ItemsSource = Procedures.GetArtists();
             dgArtistAdd.ItemsSource = Procedures.GetArtists();
         }
-        private void tabmenu_clicked(object sender, MouseButtonEventArgs e)
-        {
-            Window window = new AdminHub();
-            window.Show();
-            this.Hide();
-        }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            Procedures.AddSong((int)dgArtistAdd.SelectedValue, tbNameAdd.Text, tbYearAdd.Text);
-        }
+        #region TabEdit 
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            Procedures.EditSong((int)dgEdit.SelectedItem, (int)dgArtistAdd_Copy.SelectedItem, tbNameEdit.Text, tbYearEdit.Text);
+            Song song = (Song)dgSongs.SelectedValue;
+            tbNameEdit.Text = song.Artist_name;
+            tbYearEdit.Text = song.Year;
+            tbTextEdit.Text = song.Songtext;
+            //dgArtistEdit.ItemsSource = Procedures.SelectArtist(song.Artist_name);
+            Procedures.EditSong(song.Song_ID, (int)dgArtistEdit.SelectedItem, tbNameEdit.Text, tbYearEdit.Text, tbTextEdit.Text);
         }
 
         private void tbSearchArtistEdit_TextChanged(object sender, TextChangedEventArgs e)
         {
             string filterText = tbSearchArtistEdit.Text;
-            ICollectionView cv = CollectionViewSource.GetDefaultView(dgArtistAdd_Copy.ItemsSource);
+            ICollectionView cv = CollectionViewSource.GetDefaultView(dgArtistEdit.ItemsSource);
 
             if (!string.IsNullOrEmpty(filterText))
             {
@@ -64,6 +61,26 @@ namespace MockupTop2000
                 //Zorgen dat als er geen text staat er niet gefilterd word.
                 cv.Filter = null;
             }
+        }
+
+
+        #endregion
+
+        #region tabDelete 
+
+        #endregion
+
+        #region tabAdd 
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Procedures.AddSong((int)dgArtistAdd.SelectedValue, tbNameAdd.Text, tbYearAdd.Text);
+        }
+
+        private void tabmenu_clicked(object sender, MouseButtonEventArgs e)
+        {
+            Window window = new AdminHub();
+            window.Show();
+            this.Hide();
         }
 
         private void tbSearchArtistAdd_TextChanged(object sender, TextChangedEventArgs e)
@@ -87,5 +104,7 @@ namespace MockupTop2000
                 cv.Filter = null;
             }
         }
+
+        #endregion
     }
 }

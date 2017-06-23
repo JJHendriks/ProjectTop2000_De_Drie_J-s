@@ -46,3 +46,6 @@ C:\Users\Justin\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\MockupTop2000\obj\Deb
 C:\Users\Justin\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\MockupTop2000\obj\Debug\MockupTop2000.g.resources
 C:\Users\Justin\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\MockupTop2000\obj\Debug\MockupTop2000.Properties.Resources.resources
 C:\Users\Justin\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\MockupTop2000\obj\Debug\Top2000.csproj.GenerateResource.Cache
+C:\Users\justi\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\MockupTop2000\bin\Debug\MockupTop2000.exe.config
+C:\Users\justi\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\MockupTop2000\obj\Debug\MockupTop2000.exe
+C:\Users\justi\Desktop\ProjectTop2000_De_Drie_J-s\Top2000\MockupTop2000\obj\Debug\MockupTop2000.pdb

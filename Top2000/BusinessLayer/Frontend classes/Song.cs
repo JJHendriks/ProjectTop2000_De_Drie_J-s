@@ -40,23 +40,23 @@ namespace BusinessLayer
             set { year = value; }
         }
 
-        private string extra_Info;
+        private string songtext;
 
-        public string Extra_Info
+        public string Songtext
         {
-            get { return extra_Info; }
-            set { extra_Info = value; }
+            get { return songtext; }
+            set { songtext = value; }
         }
 
 
 
-        public Song(int songid, string artist_name, string title, string year, string extrainfo)
+        public Song(int songid, string artist_name, string title, string year, string text)
         {
             this.song_ID = songid;
             this.artist_Name = artist_name;
             this.title = title;
             this.year = year;
-            this.extra_Info = extrainfo;
+            this.songtext = text;
         }
 
         public Song()
