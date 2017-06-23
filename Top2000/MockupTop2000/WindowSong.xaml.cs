@@ -35,11 +35,17 @@ namespace MockupTop2000
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             Song song = (Song)dgSongs.SelectedValue;
+            dgArtistEdit.ItemsSource = Procedures.SelectArtist(song.Artist_id);
+            Artist artist = (Artist)dgArtistEdit.SelectedValue;
+            Procedures.EditSong(song.Song_ID, (int)dgArtistEdit.SelectedItem, tbNameEdit.Text, tbYearEdit.Text, tbTextEdit.Text);
+        }
+
+        private void dgSongs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Song song = (Song)dgSongs.SelectedValue;
             tbNameEdit.Text = song.Artist_name;
             tbYearEdit.Text = song.Year;
             tbTextEdit.Text = song.Songtext;
-            //dgArtistEdit.ItemsSource = Procedures.SelectArtist(song.Artist_name);
-            Procedures.EditSong(song.Song_ID, (int)dgArtistEdit.SelectedItem, tbNameEdit.Text, tbYearEdit.Text, tbTextEdit.Text);
         }
 
         private void tbSearchArtistEdit_TextChanged(object sender, TextChangedEventArgs e)
@@ -87,7 +93,7 @@ namespace MockupTop2000
         {
 
             string filterText = tbSearchArtistAdd.Text;
-            ICollectionView cv = CollectionViewSource.GetDefaultView(dgArtistAdd_Copy.ItemsSource);
+            ICollectionView cv = CollectionViewSource.GetDefaultView(dgArtistAdd.ItemsSource);
 
             if (!string.IsNullOrEmpty(filterText))
             {

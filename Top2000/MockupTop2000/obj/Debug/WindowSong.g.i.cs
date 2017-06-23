@@ -315,6 +315,12 @@ namespace MockupTop2000 {
             return;
             case 2:
             this.dgSongs = ((System.Windows.Controls.DataGrid)(target));
+            
+            #line 67 "..\..\WindowSong.xaml"
+            this.dgSongs.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.dgSongs_SelectionChanged);
+            
+            #line default
+            #line hidden
             return;
             case 3:
             this.tbSearchEdit = ((System.Windows.Controls.TextBox)(target));

@@ -64,7 +64,7 @@
                                 <GradientStop Color="#FFB03939" Offset="0.5"/>
                             </LinearGradientBrush>
                         </Grid.Background>
-                        <DataGrid x:Name="dgSongs" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="270" Width="256"/>
+                        <DataGrid x:Name="dgSongs" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="270" Width="256" SelectionChanged="dgSongs_SelectionChanged"/>
                         <TextBox x:Name="tbSearchEdit" HorizontalAlignment="Left" Height="23" Margin="62,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
                         <TextBox x:Name="tbNameEdit" HorizontalAlignment="Left" Height="23" Margin="293,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
                         <Label x:Name="label" Content="Naam van het lied:" HorizontalAlignment="Left" Margin="293,70,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold" Grid.ColumnSpan="2"/>
