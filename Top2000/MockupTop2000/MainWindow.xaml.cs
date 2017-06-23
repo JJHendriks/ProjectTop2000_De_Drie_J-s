@@ -34,6 +34,7 @@ namespace MockupTop2000
             {
                 cbYear.Items.Add(item.Jaar);
             }
+            cbYear.SelectedIndex = 16;
         }
 
         private void options_click(object sender, MouseButtonEventArgs e)
