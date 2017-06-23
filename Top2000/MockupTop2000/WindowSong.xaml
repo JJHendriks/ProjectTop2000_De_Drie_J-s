@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MockupTop2000"
         mc:Ignorable="d"
-         Title="WindowSong" Height="700" Width="600">
+         Title="WindowSong" Height="427.6" Width="600">
     <Grid>
         <TabControl TabStripPlacement="Top" HorizontalAlignment="Stretch" BorderBrush="#41020202">
             <TabControl.BitmapEffect>
@@ -64,15 +64,13 @@
                                 <GradientStop Color="#FFB03939" Offset="0.5"/>
                             </LinearGradientBrush>
                         </Grid.Background>
-                        <DataGrid x:Name="dgSongs" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="270" Width="256" SelectionChanged="dgSongs_SelectionChanged"/>
+                        <DataGrid x:Name="dgSongs" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Height="292" Width="256" SelectionChanged="dgSongs_SelectionChanged"/>
                         <TextBox x:Name="tbSearchEdit" HorizontalAlignment="Left" Height="23" Margin="62,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
                         <TextBox x:Name="tbNameEdit" HorizontalAlignment="Left" Height="23" Margin="293,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
                         <Label x:Name="label" Content="Naam van het lied:" HorizontalAlignment="Left" Margin="293,70,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold" Grid.ColumnSpan="2"/>
                         <Button x:Name="btnSave" Content="Opslaan" HorizontalAlignment="Left" Margin="89,15,0,0" VerticalAlignment="Top" Width="162" Height="50" Click="btnSave_Click" Grid.Column="1"/>
                         <TextBox x:Name="tbYearEdit" HorizontalAlignment="Left" Height="23" Margin="293,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
                         <Label x:Name="label_Copy5" Content="Jaar van uitkomen:" HorizontalAlignment="Left" Margin="293,261,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold" Grid.ColumnSpan="2"/>
-                        <TextBox x:Name="tbTextEdit" HorizontalAlignment="Left" Height="231" Margin="30,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="522" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
-                        <Label x:Name="label_Copy6" Content="Songtext:" HorizontalAlignment="Left" Margin="30,343,0,0" VerticalAlignment="Top" Width="71" Foreground="White" FontWeight="Bold"/>
                         <Label x:Name="label_Copy" Content="Naam van de artiest:" HorizontalAlignment="Left" Margin="293,138,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold" Grid.ColumnSpan="2"/>
                         <DataGrid x:Name="dgArtistEdit" HorizontalAlignment="Left" Margin="293,169,0,0" VerticalAlignment="Top" Height="91" Width="259" Grid.ColumnSpan="2"/>
                         <TextBox x:Name="tbSearchArtistEdit" HorizontalAlignment="Left" Height="23" Margin="135,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.121,0.474" TextChanged="tbSearchArtistEdit_TextChanged" Grid.Column="1"/>
@@ -89,9 +87,9 @@
                                 <GradientStop Color="#FFB03939" Offset="0.5"/>
                             </LinearGradientBrush>
                         </Grid.Background>
-                        <TextBox x:Name="tbSearchDelete" HorizontalAlignment="Left" Height="23" Margin="110,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
-                        <DataGrid x:Name="dgDelete" HorizontalAlignment="Left" Margin="43,100,0,0" VerticalAlignment="Top" Height="477" Width="296"/>
-                        <Button x:Name="button1" Content="Verwijderen" HorizontalAlignment="Left" Margin="408,264,0,0" VerticalAlignment="Top" Width="81" Height="44"/>
+                        <TextBox x:Name="tbSearchDelete" HorizontalAlignment="Left" Height="23" Margin="367,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147"/>
+                        <DataGrid x:Name="dgDelete" HorizontalAlignment="Left" Margin="39,10,0,0" VerticalAlignment="Top" Height="341" Width="296"/>
+                        <Button x:Name="button1" Content="Verwijderen" HorizontalAlignment="Left" Margin="408,197,0,0" VerticalAlignment="Top" Width="106" Height="63"/>
                     </Grid>
                 </TabItem.Content>
             </TabItem>
@@ -112,11 +110,9 @@
                         <TextBox x:Name="tbNameAdd" HorizontalAlignment="Left" Height="23" Margin="28,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
                         <Label x:Name="label_Copy1" Content="Naam van het lied:" HorizontalAlignment="Left" Margin="28,81,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
                         <Label x:Name="label_Copy2" Content="Naam van de artiest:" HorizontalAlignment="Left" Margin="28,140,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
-                        <TextBox x:Name="tbYearAdd" HorizontalAlignment="Left" Height="23" Margin="28,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
-                        <Label x:Name="label_Copy3" Content="Jaar van uitkomen:" HorizontalAlignment="Left" Margin="28,301,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
-                        <TextBox x:Name="tbTextAdd" HorizontalAlignment="Left" Height="231" Margin="28,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="522" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
-                        <Label x:Name="label_Copy4" Content="Songtext:" HorizontalAlignment="Left" Margin="28,361,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
-                        <DataGrid x:Name="dgEdit" HorizontalAlignment="Left" Margin="144.9,26,0,0" VerticalAlignment="Top" Height="329" Width="230" Grid.Column="1"/>
+                        <TextBox x:Name="tbYearAdd" HorizontalAlignment="Left" Height="23" Margin="28,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="259" RenderTransformOrigin="0.121,0.474" Grid.ColumnSpan="2"/>
+                        <Label x:Name="label_Copy3" Content="Jaar van uitkomen:" HorizontalAlignment="Left" Margin="28,267,0,0" VerticalAlignment="Top" Width="124" Foreground="White" FontWeight="Bold"/>
+                        <DataGrid x:Name="dgEdit" HorizontalAlignment="Left" Margin="144.8,26,0,0" VerticalAlignment="Top" Height="295" Width="230" Grid.Column="1"/>
                         <Button x:Name="btnAdd" Content="Toevoegen" HorizontalAlignment="Left" Margin="44,26,0,0" VerticalAlignment="Top" Width="162" Height="50" Grid.ColumnSpan="2" Click="btnAdd_Click"/>
                         <DataGrid x:Name="dgArtistAdd" HorizontalAlignment="Left" Margin="28,171,0,0" VerticalAlignment="Top" Height="91" Width="259" Grid.ColumnSpan="2"/>
                         <TextBox x:Name="tbSearchArtistAdd" HorizontalAlignment="Left" Height="23" Margin="10,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.121,0.474" Grid.Column="1" TextChanged="tbSearchArtistAdd_TextChanged"/>

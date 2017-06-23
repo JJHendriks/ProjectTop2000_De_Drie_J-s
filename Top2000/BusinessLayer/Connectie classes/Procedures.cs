@@ -482,7 +482,7 @@ namespace DataLayer
         //    }
         //}
 
-        public static bool EditSong(int song_id, int artist_id, string title, string year, string text)
+        public static bool EditSong(int song_id, int artist_id, string title, string year)
         {
             SqlConnection connection = Connection.GetConnection();
             string updateStatement =
@@ -497,8 +497,6 @@ namespace DataLayer
                 "@title", title);
             updateCommand.Parameters.AddWithValue(
                 "@year", year);
-            updateCommand.Parameters.AddWithValue(
-                "@songtext", text);
 
             try
             {

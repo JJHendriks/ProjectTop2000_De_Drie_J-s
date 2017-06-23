@@ -37,7 +37,7 @@ namespace MockupTop2000
             Song song = (Song)dgSongs.SelectedValue;
             dgArtistEdit.ItemsSource = Procedures.SelectArtist(song.Artist_id);
             Artist artist = (Artist)dgArtistEdit.SelectedValue;
-            Procedures.EditSong(song.Song_ID, (int)dgArtistEdit.SelectedItem, tbNameEdit.Text, tbYearEdit.Text, tbTextEdit.Text);
+            Procedures.EditSong(song.Song_ID, (int)dgArtistEdit.SelectedItem, tbNameEdit.Text, tbYearEdit.Text);
         }
 
         private void dgSongs_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -45,7 +45,6 @@ namespace MockupTop2000
             Song song = (Song)dgSongs.SelectedValue;
             tbNameEdit.Text = song.Artist_name;
             tbYearEdit.Text = song.Year;
-            tbTextEdit.Text = song.Songtext;
         }
 
         private void tbSearchArtistEdit_TextChanged(object sender, TextChangedEventArgs e)
