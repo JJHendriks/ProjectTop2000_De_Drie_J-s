@@ -27,6 +27,7 @@ namespace MockupTop2000
             InitializeComponent();
             dgEdit.ItemsSource = Procedures.GetArtists();
             //dgArtistsRemove.ItemsSource = Procedures.GetEmptyArtists();
+            
         }
 
         private void tabmenu_clicked(object sender, MouseButtonEventArgs e)
@@ -38,19 +39,35 @@ namespace MockupTop2000
 
         private void dgEdit_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            //Artist artiest = (Artist)dgEdit.SelectedValue;
+            //string artiest_naam = artiest.Artist_Name;
+            //dgArtistSongs.ItemsSource = Procedures.GetSongsFromArtist(artiest_naam);
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             //Aanpassingen aan een artiest opslaan
-            //Procedures.EditArtist();
+            Artist artiest = (Artist)dgEdit.SelectedValue;
+            int artiest_id = artiest.Artist_ID;
+
+            Procedures.EditArtist(artiest_id, tbNameEdit.Text, tbInfoEdit.Text);
+            dgEdit.ItemsSource = Procedures.GetArtists();
+            tbNameEdit.Text = "";
+            tbInfoEdit.Text = "";
+            tbSearchEdit.Clear();
+            this.dgEdit.Columns[2].Visibility = Visibility.Hidden;
+
+
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             Procedures.AddArtist(tbNameAdd.Text, tbInfoAdd.Text);
-            Procedures.CertainArtist();
+            dgArtistAdd.ItemsSource = Procedures.CertainArtist();
+            this.dgArtistAdd.Columns[2].Visibility = Visibility.Hidden;
+            tbNameAdd.Text = "";
+            tbInfoAdd.Text = "";
+
         }
 
         private void tbSearchRemove_TextChanged(object sender, TextChangedEventArgs e)
@@ -92,5 +109,7 @@ namespace MockupTop2000
                 cv.Filter = null;
             }
         }
+
+      
     }
 }

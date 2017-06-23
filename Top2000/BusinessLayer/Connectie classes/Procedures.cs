@@ -179,8 +179,45 @@ namespace DataLayer
                 {
                     Song song = new Song();
                     song.Song_ID = itemReader.GetInt32(0);
-                    song.Artist_name = itemReader.GetString(1);
-                    song.Title = itemReader.GetString(2);
+                    song.Title = itemReader.GetString(1);
+                    song.Artist_name = itemReader.GetString(2);
+                    
+                }
+                return lijst;
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public static List<Song> GetSongsFromArtist(string artist_naam)
+        {
+            List<Song> lijst = new List<Song>();
+            SqlConnection connection = Connection.GetConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spTop2000LiedjesVanArtiest";
+            cmd.Parameters.AddWithValue("@ArtiestNaam", artist_naam);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader itemReader =
+                    cmd.ExecuteReader(CommandBehavior.SingleResult);
+                while (itemReader.Read())
+                {
+                    Song song = new Song();
+                    song.Song_ID = itemReader.GetInt32(0);
+                    song.Title = itemReader.GetString(1);
+                    song.Artist_name = itemReader.GetString(2);
+
                 }
                 return lijst;
 
