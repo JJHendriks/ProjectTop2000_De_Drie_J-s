@@ -36,20 +36,22 @@ namespace MockupTop2000
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             Song song = (Song)dgSongs.SelectedValue;
-            dgArtistEdit.ItemsSource = Procedures.SelectArtist(song.Artist_id);
             Artist artist = (Artist)dgArtistEdit.SelectedValue;
-            Procedures.EditSong(song.Song_ID, (int)dgArtistEdit.SelectedItem, tbNameEdit.Text, tbYearEdit.Text);
+            Procedures.EditSong(song.Song_ID, artist.Artist_ID, tbNameEdit.Text, Convert.ToInt32(tbYearEdit.Text));
+            MessageBox.Show("De song is succesvol aangepast!");
         }
 
         private void dgSongs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Song song = (Song)dgSongs.SelectedValue;
-            tbNameEdit.Text = song.Artist_name;
+            tbNameEdit.Text = song.Title;
             tbYearEdit.Text = song.Year.ToString();
+            dgArtistEdit.ItemsSource = Procedures.SelectArtist(song.Artist_id);
         }
 
         private void tbSearchArtistEdit_TextChanged(object sender, TextChangedEventArgs e)
         {
+            dgArtistEdit.ItemsSource = Procedures.GetArtists();
             string filterText = tbSearchArtistEdit.Text;
             ICollectionView cv = CollectionViewSource.GetDefaultView(dgArtistEdit.ItemsSource);
 
@@ -72,18 +74,14 @@ namespace MockupTop2000
 
         #endregion
 
-        #region tabDelete 
-
-        #endregion
-
         #region tabAdd 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             Artist artist = (Artist)dgArtistAdd.SelectedValue;
-            Procedures.AddSong(artist.Artist_ID, tbNameAdd.Text, tbYearAdd.Text);
+            Procedures.AddSong(artist.Artist_ID, tbNameAdd.Text, Convert.ToInt32(tbYearAdd.Text));
             dgAddSongs.ItemsSource = Procedures.CertainSong();
-            this.dgAddSongs.Columns[1].Visibility = Visibility.Hidden;
-            this.dgAddSongs.Columns[2].Visibility = Visibility.Hidden;
+            this.dgAddSongs.Columns[3].Visibility = Visibility.Hidden;
+            this.dgAddSongs.Columns[4].Visibility = Visibility.Hidden;
             tbNameAdd.Clear();
             tbSearchArtistAdd.Clear();
             tbYearAdd.Clear();
@@ -120,5 +118,6 @@ namespace MockupTop2000
         }
 
         #endregion
+
     }
 }
