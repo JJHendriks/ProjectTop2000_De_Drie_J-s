@@ -28,6 +28,7 @@ namespace MockupTop2000
         {
             InitializeComponent();
             dgToplist.ItemsSource = Procedures.SelectListJaar(2015);
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
 
             //Vult de combobox met een lijst van beschikbare jaren
             foreach (var item in Procedures.GetYears())

@@ -27,8 +27,9 @@ namespace MockupTop2000
         {
             InitializeComponent();
             dgEdit.ItemsSource = Procedures.GetArtists();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             //dgArtistsRemove.ItemsSource = Procedures.GetEmptyArtists();
-            
+
         }
 
         private void tabmenu_clicked(object sender, MouseButtonEventArgs e)

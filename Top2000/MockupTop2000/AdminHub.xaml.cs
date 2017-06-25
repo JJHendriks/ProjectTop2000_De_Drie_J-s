@@ -24,6 +24,7 @@ namespace MockupTop2000
         public AdminHub()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void btnLijst_Click(object sender, RoutedEventArgs e)
